@@ -1,0 +1,50 @@
+[
+  {
+    "id": "shiprocket-agentic",
+    "title": "Shiprocket Agentic",
+    "href": "/work/shiprocket-agentic/",
+    "kind": "case-study"
+  },
+  {
+    "id": "add-order",
+    "title": "Unified Add Order Experience",
+    "href": "https://www.figma.com/proto/UX0IpNHgzqQDN0Ii4bQAtj/Deeksha-Portfolio?node-id=512-899&t=GfZBMZWbUnm6v8J0-1&scaling=min-zoom&content-scaling=fixed&page-id=512%3A896",
+    "kind": "case-study"
+  },
+  {
+    "id": "quick-and-rider",
+    "title": "Quick & Rider",
+    "href": "/work/quick-and-rider/",
+    "kind": "case-study"
+  },
+  {
+    "id": "apna-store",
+    "title": "Apna Store",
+    "href": "/work/apna-store/",
+    "kind": "case-study"
+  },
+  {
+    "id": "ux-masterclass",
+    "title": "UX Masterclass",
+    "href": "/uploads/Dee-UX-Masterclass.pdf",
+    "kind": "talk"
+  },
+  {
+    "id": "design-system-context",
+    "title": "Design system context",
+    "href": "/playground/design-system-context/",
+    "kind": "experiment"
+  },
+  {
+    "id": "adversarial-reviewer",
+    "title": "Adversarial reviewer",
+    "href": "/playground/adversarial-reviewer/",
+    "kind": "experiment"
+  },
+  {
+    "id": "writing-rules",
+    "title": "Writing rules",
+    "href": "/playground/writing-rules/",
+    "kind": "experiment"
+  }
+]

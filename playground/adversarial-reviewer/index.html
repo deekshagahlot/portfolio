@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reviewing my own work with an adversarial prompt — Deeksha Gahlot</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet" />
+<style>
+  html { scroll-behavior: smooth; }
+  html, body { margin: 0; padding: 0; background: #FDFCFA; }
+  * { box-sizing: border-box; }
+  a { color: #2B2A26; text-decoration: none; }
+  a:hover { color: #8A6A44; }
+  ::selection { background: #E4D6BE; }
+  @media (max-width: 900px) { .xp-grid { grid-template-columns: 1fr !important; } .xp-rail { position: static !important; } }
+</style>
+
+  <script type="module" src="/src/hover.js"></script>
+</head>
+<body>
+<div style="font-family: 'Plus Jakarta Sans', Helvetica, sans-serif; color: #2B2A26; background: #FDFCFA; min-height: 100vh">
+
+  <header style="position: sticky; top: 0; z-index: 20; display: flex; align-items: center; justify-content: space-between; gap: 2vw; padding: 1.4vw 5vw; background: rgba(253,252,250,0.94); backdrop-filter: blur(8px); border-bottom: 1px solid #EAE7E0">
+    <a href="/#playground" style="font-size: clamp(13px, 1.05vw, 18px); font-weight: 500; color: #4A4740">← Back to experiments</a>
+    <a href="/" style="font-size: clamp(13px, 1.05vw, 18px); font-weight: 700; color: #22211D">Deeksha Gahlot</a>
+  </header>
+
+  <main class="xp-grid" style="display: grid; grid-template-columns: 300px minmax(0, 640px); gap: 5vw; justify-content: center; padding: 5vw 5vw 7vw">
+
+    <aside>
+      <div class="xp-rail" style="position: sticky; top: 7vw">
+        <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 22px">
+          <span style="padding: 8px 12px; border-radius: 8px; background: #E7EAF1; font-size: 11px; font-weight: 600; letter-spacing: 0.09em; color: #5C6579">AI &amp; EMERGING TECH</span>
+          <span style="padding: 8px 12px; border-radius: 8px; background: #E7EAF1; font-size: 11px; font-weight: 600; letter-spacing: 0.09em; color: #5C6579">UX PROCESS</span>
+        </div>
+        <div style="padding: 26px 24px; border-radius: 16px; border: 1px solid #EAE7E0; background: #FFFFFF; box-shadow: 0 10px 28px rgba(120,104,72,0.08)">
+          <div style="font-size: 11px; font-weight: 700; letter-spacing: 0.16em; color: #8A8172">DURATION</div>
+          <div style="margin-top: 10px; font-size: 15px; color: #33322D">2 hours</div>
+
+          <div style="margin-top: 26px; font-size: 11px; font-weight: 700; letter-spacing: 0.16em; color: #8A8172">STATUS</div>
+          <div style="margin-top: 10px; display: flex; align-items: center; gap: 9px; font-size: 15px; color: #33322D">
+            <span style="width: 8px; height: 8px; border-radius: 999px; background: #4E9A5F; flex: none"></span>Shipped
+          </div>
+
+          <div style="margin-top: 26px; font-size: 11px; font-weight: 700; letter-spacing: 0.16em; color: #8A8172">IMPACT</div>
+          <div style="margin-top: 10px; font-size: 15px; line-height: 1.55; color: #33322D">11 gaps surfaced on a flow I considered finished; 4 worth fixing</div>
+
+          <div style="margin-top: 26px; font-size: 11px; font-weight: 700; letter-spacing: 0.16em; color: #8A8172">ROLE</div>
+          <div style="margin-top: 10px; display: flex; flex-direction: column; gap: 7px; font-size: 15px; color: #33322D">
+            <span>Interaction design</span>
+            <span>Prompt engineering</span>
+            <span>Design QA</span>
+          </div>
+
+          <div style="margin-top: 26px; font-size: 11px; font-weight: 700; letter-spacing: 0.16em; color: #8A8172">TOOLS</div>
+          <div style="margin-top: 10px; display: flex; flex-direction: column; gap: 7px; font-size: 15px; color: #33322D">
+            <span>Claude</span>
+            <span>Figma</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <article>
+      <div style="position: relative; border-radius: 16px; overflow: hidden; background: #DCE9F2; box-shadow: 0 12px 32px rgba(120,104,72,0.10)">
+        <div style="width: 100%; padding-bottom: 58%; position: relative; background: #DCE9F2">
+          <img src="/uploads/pasted-1788616891293-0.webp" alt="Content guidelines skill file" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover" />
+        </div>
+      </div>
+
+      <div style="margin-top: 3.4vw; font-size: 11px; font-weight: 600; letter-spacing: 0.14em; color: #8A8172">USING A MODEL TO FIND WHAT ISN’T THERE</div>
+      <h1 style="margin: 18px 0 0; font-size: clamp(32px, 3.4vw, 58px); line-height: 1.12; font-weight: 800; letter-spacing: -0.02em; color: #22211D; text-wrap: pretty">Reviewing my own work with an adversarial prompt</h1>
+
+      <div style="margin-top: 3.2vw; font-size: 11px; font-weight: 600; letter-spacing: 0.14em; color: #8A8172">OVERVIEW</div>
+      <p style="margin: 16px 0 0; font-size: clamp(15px, 1.15vw, 20px); line-height: 1.7; color: #4A4740; text-wrap: pretty">Instead of asking a model to generate a design, I asked it to attack one. I gave it a flow I’d already signed off and asked what states, cases, and failure paths were missing — then triaged the list myself.</p>
+
+      <div style="margin-top: 4vw; font-size: 11px; font-weight: 600; letter-spacing: 0.14em; color: #8A8172">THE PROBLEM</div>
+      <h2 style="margin: 12px 0 0; font-size: clamp(22px, 2vw, 34px); line-height: 1.25; font-weight: 800; letter-spacing: -0.015em; color: #22211D">You can’t review a screen for what isn’t on it</h2>
+      <p style="margin: 16px 0 0; font-size: clamp(15px, 1.15vw, 20px); line-height: 1.7; color: #4A4740; text-wrap: pretty">Design review looks at the canvas. The expensive mistakes are the things that never reached the canvas at all — the empty state nobody drew, the partial-failure case, the permission variant, what happens on a slow connection. Those don’t get caught by looking harder at the frame. They get caught by someone holding a checklist of everything a flow <em>could</em> need and going down it, which is tedious and therefore skipped.</p>
+      <p style="margin: 16px 0 0; font-size: clamp(15px, 1.15vw, 20px); line-height: 1.7; color: #4A4740; text-wrap: pretty">I wanted to know whether a model was good at exactly that tedium.</p>
+
+      <div style="margin-top: 4vw; font-size: 11px; font-weight: 600; letter-spacing: 0.14em; color: #8A8172">APPROACH</div>
+      <h2 style="margin: 12px 0 0; font-size: clamp(22px, 2vw, 34px); line-height: 1.25; font-weight: 800; letter-spacing: -0.015em; color: #22211D">Ask for absence, not output</h2>
+      <p style="margin: 16px 0 0; font-size: clamp(15px, 1.15vw, 20px); line-height: 1.7; color: #4A4740; text-wrap: pretty">I described the flow state by state: entry points, happy path, what data each screen depends on, what the user can do at each step. Then I asked for what was missing, specifically: empty states, error and partial-failure states, loading and latency behaviour, permission and role variants, edge cases in the data, and accessibility gaps.</p>
+      <p style="margin: 16px 0 0; font-size: clamp(15px, 1.15vw, 20px); line-height: 1.7; color: #4A4740; text-wrap: pretty">Then I triaged. Every item got sorted into <em>real gap</em>, <em>deliberate omission</em>, or <em>doesn’t apply here</em>. The triage is the design work — the list is just raw material.</p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-top: 2.4vw">
+        <div style="padding: 24px; border-radius: 16px; border: 1px solid #EAE7E0; background: #FFFFFF; box-shadow: 0 10px 26px rgba(120,104,72,0.07)">
+          <div style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 999px; background: #D9E7F5">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#3D6B93" stroke-width="1.7" stroke-linecap="round" style="width: 18px; height: 18px"><path d="M12 3.5a5.5 5.5 0 0 1 3.2 9.9V16H8.8v-2.6A5.5 5.5 0 0 1 12 3.5zM9.8 19h4.4M10.4 21.4h3.2"></path></svg>
+          </div>
+          <div style="margin-top: 18px; font-size: 11px; font-weight: 600; letter-spacing: 0.14em; color: #8A8172">LEARNING</div>
+          <div style="margin-top: 8px; font-family: 'EB Garamond', serif; font-size: clamp(18px, 1.5vw, 26px); color: #22211D">Models are better at absence than at presence</div>
+          <p style="margin: 14px 0 0; font-size: clamp(14px, 1.05vw, 18px); line-height: 1.65; color: #4A4740; text-wrap: pretty">Generating a design means making a hundred judgement calls about a specific context. Listing what a flow of this type usually needs is recall against a pattern, and that’s where the model is strong. It found eleven things I’d missed on a flow I’d already signed off. High recall is the point: I’d rather dismiss five irrelevant items than miss one real one.</p>
+        </div>
+        <div style="padding: 24px; border-radius: 16px; border: 1px solid #EAE7E0; background: #FFFFFF; box-shadow: 0 10px 26px rgba(120,104,72,0.07)">
+          <div style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 999px; background: #F3DDE4">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#94566C" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="width: 18px; height: 18px"><path d="M5 7l7.5 7.5L17 10"></path><path d="M19 15V9.5h-5.5"></path></svg>
+          </div>
+          <div style="margin-top: 18px; font-size: 11px; font-weight: 600; letter-spacing: 0.14em; color: #8A8172">HICCUP</div>
+          <div style="margin-top: 8px; font-family: 'EB Garamond', serif; font-size: clamp(18px, 1.5vw, 26px); color: #22211D">Low precision, and it can’t tell you what matters</div>
+          <p style="margin: 14px 0 0; font-size: clamp(14px, 1.05vw, 18px); line-height: 1.65; color: #4A4740; text-wrap: pretty">Roughly seven of the items didn’t apply — states that don’t exist in this product, cases ruled out by an earlier decision it had no way of knowing about. It also flagged everything at the same severity. A missing empty state and a missing offline mode arrived as equal-weight bullets. Deciding which gaps were worth the build cost still needed someone who knew the roadmap, the users, and what we’d already chosen not to support.</p>
+        </div>
+      </div>
+
+      <div style="margin-top: 4vw; font-size: 11px; font-weight: 600; letter-spacing: 0.14em; color: #8A8172">OUTCOME</div>
+      <h2 style="margin: 12px 0 0; font-size: clamp(22px, 2vw, 34px); line-height: 1.25; font-weight: 800; letter-spacing: -0.015em; color: #22211D">A better checklist, not a better reviewer</h2>
+      <p style="margin: 16px 0 0; font-size: clamp(15px, 1.15vw, 20px); line-height: 1.7; color: #4A4740; text-wrap: pretty">This is now a standing step before I hand anything off. It doesn’t replace review — it front-loads the boring half so review can be about judgement instead of recall. The honest framing: the model produced the list, I produced the decisions, and the decisions were the part that took the skill.</p>
+
+      <div style="margin-top: 5vw; padding-top: 3vw; border-top: 1px solid #EAE7E0; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px">
+        <a href="/playground/design-system-context/" style="padding: 22px 24px; border-radius: 16px; border: 1px solid #EAE7E0; background: #FFFFFF; box-shadow: 0 10px 26px rgba(120,104,72,0.07)" style-hover="transform: translateY(-2px)">
+          <div style="font-size: 11px; font-weight: 600; letter-spacing: 0.14em; color: #8A8172">← PREVIOUS</div>
+          <div style="margin-top: 10px; font-size: clamp(15px, 1.2vw, 21px); font-weight: 700; line-height: 1.35; color: #22211D">Which format of design system context actually works</div>
+        </a>
+        <a href="/playground/writing-rules/" style="padding: 22px 24px; border-radius: 16px; border: 1px solid #EAE7E0; background: #FFFFFF; box-shadow: 0 10px 26px rgba(120,104,72,0.07); text-align: right" style-hover="transform: translateY(-2px)">
+          <div style="font-size: 11px; font-weight: 600; letter-spacing: 0.14em; color: #8A8172">NEXT →</div>
+          <div style="margin-top: 10px; font-size: clamp(15px, 1.2vw, 21px); font-weight: 700; line-height: 1.35; color: #22211D">Turning content guidelines into a reusable skill</div>
+        </a>
+      </div>
+    </article>
+  </main>
+</div>
+</body>
+</html>

@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apna Store, visual design showcase</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0F1E1A;
+    --pine:#0E3B31;
+    --moss:#5B6B64;
+    --line:#E2E7E3;
+    --wash:#F2F5F2;
+    --white:#fff;
+    --col:660px;
+    --rail:236px;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;background:var(--white);color:var(--ink);
+    font-family:"Inter",system-ui,sans-serif;
+    font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit}
+  img{max-width:100%;display:block}
+
+  .topbar{
+    position:sticky;top:0;z-index:20;
+    display:flex;align-items:center;justify-content:space-between;gap:16px;
+    padding:16px 40px;background:rgba(255,255,255,.92);
+    backdrop-filter:blur(8px);border-bottom:1px solid var(--line);font-size:14px;
+  }
+  .topbar a{text-decoration:none;color:var(--moss)}
+  .topbar a:hover{color:var(--ink)}
+  .topbar strong{font-weight:600}
+
+  .shell{
+    max-width:1140px;margin:0 auto;padding:56px 40px 0;
+    display:grid;grid-template-columns:var(--rail) minmax(0,1fr);
+    gap:72px;align-items:start;
+  }
+  .rail{position:sticky;top:96px}
+  .tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+  .tag{
+    background:var(--wash);color:var(--pine);font-size:11.5px;
+    letter-spacing:.08em;text-transform:uppercase;font-weight:600;
+    padding:6px 10px;border-radius:4px;
+  }
+  .facts{border:1px solid var(--line);border-radius:10px;padding:20px 20px 22px}
+  .facts dt{
+    font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--moss);font-weight:600;margin:20px 0 8px;
+    padding-top:18px;border-top:1px solid var(--line);
+  }
+  .facts dt:first-of-type{margin-top:0;padding-top:0;border-top:0}
+  .facts dd{margin:0;font-size:14.5px;line-height:1.45}
+  .facts dd .sub{display:block;color:var(--moss);font-size:13.5px;margin-top:2px}
+  .facts ul{list-style:none;padding:0;margin:0}
+  .facts ul li{font-size:13.5px;line-height:1.4;padding:4px 0;color:var(--ink)}
+  .facts ul li b{font-weight:600}
+  .facts ul li span{color:var(--moss)}
+
+  .doc{max-width:var(--col);min-width:0}
+  .eyebrow{
+    font-size:11px;letter-spacing:.13em;text-transform:uppercase;
+    color:var(--moss);font-weight:600;margin:0 0 14px;
+  }
+  h1{
+    font-family:"Bricolage Grotesque",serif;font-weight:600;
+    font-size:clamp(38px,5vw,56px);line-height:1.03;
+    letter-spacing:-.025em;margin:0 0 24px;
+  }
+  h2{
+    font-family:"Bricolage Grotesque",serif;font-weight:600;font-size:29px;
+    line-height:1.18;letter-spacing:-.02em;margin:0 0 18px;
+  }
+  h3{font-size:17.5px;font-weight:600;margin:0 0 8px;letter-spacing:-.01em}
+  p{margin:0 0 20px}
+  .lede{font-size:19px;line-height:1.6}
+  .doc section{margin-bottom:76px}
+  .doc section:last-of-type{margin-bottom:0}
+  .doc > figure{margin-bottom:76px}
+  .note{font-size:14.5px;color:var(--moss);line-height:1.55}
+
+  figure{margin:30px 0 0}
+  figcaption{margin-top:14px;font-size:13.5px;color:var(--moss);line-height:1.5}
+
+  /* ---------- device mockups ---------- */
+  .device{
+    position:relative;border-radius:24px;background:#12211D;padding:5px;
+    box-shadow:0 22px 44px -14px rgba(15,30,26,.34), 0 3px 8px rgba(15,30,26,.10);
+  }
+  .device::after{
+    content:"";position:absolute;top:11px;left:50%;transform:translateX(-50%);
+    width:34%;height:5px;border-radius:99px;background:rgba(255,255,255,.16);
+  }
+  .device img{border-radius:19px;width:100%}
+
+  .stage{
+    margin:30px 0 0;border-radius:14px;overflow:hidden;
+    border:1px solid var(--line);background:var(--wash);
+  }
+  .stage img{width:100%;display:block}
+
+  .shot{
+    border-radius:14px;overflow:hidden;background:var(--wash);
+    border:1px solid var(--line);
+    box-shadow:0 14px 30px -14px rgba(15,30,26,.22);
+  }
+  .shot img{width:100%;display:block}
+
+  .pair{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:30px 0 0;align-items:start}
+
+  .showcase{
+    display:grid;grid-template-columns:214px minmax(0,1fr);gap:32px;
+    align-items:center;margin:30px 0 0;
+  }
+  .showcase .body h3{margin-bottom:10px}
+  .showcase .body p{margin:0 0 14px;font-size:15.5px;line-height:1.6;color:var(--moss)}
+  .showcase .body p:last-child{margin-bottom:0}
+  .showcase .body strong{color:var(--ink);font-weight:600}
+  .showcase.flip{grid-template-columns:minmax(0,1fr) 214px}
+  .showcase.flip .shot{order:2}
+
+  /* competitive table */
+  .tablewrap{margin:30px 0 0;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  table.ct{border-collapse:collapse;width:100%;min-width:620px;font-size:13.5px;line-height:1.45}
+  table.ct th,table.ct td{text-align:left;vertical-align:top;padding:12px 14px;border-bottom:1px solid var(--line)}
+  table.ct thead th{
+    font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--moss);
+    font-weight:700;border-bottom:1px solid var(--ink);padding-bottom:9px;white-space:nowrap;
+  }
+  table.ct tbody th{
+    font-weight:600;color:var(--ink);width:150px;min-width:150px;
+    background:var(--white);position:sticky;left:0;z-index:1;
+  }
+  table.ct td{color:var(--moss)}
+  table.ct td.ours{background:#FBF7EC;color:#7A6320}
+  table.ct thead th.ours{color:#8A7025}
+  table.ct .none{color:#B0BBB4}
+  .tablenote{margin-top:12px;font-size:13.5px;color:var(--moss);line-height:1.5}
+
+  .points{list-style:none;padding:0;margin:0}
+  .points li{padding:18px 0;border-top:1px solid var(--line)}
+  .points li:last-child{border-bottom:1px solid var(--line)}
+  .points p{margin:6px 0 0;font-size:15.5px;color:var(--moss);line-height:1.55}
+
+  .quote{
+    border-left:2px solid var(--pine);padding:2px 0 2px 20px;margin:26px 0;
+    font-size:17px;line-height:1.55;
+  }
+  .quote span{display:block;margin-top:8px;font-size:13.5px;color:var(--moss)}
+
+  .call{border:1px solid var(--line);border-radius:10px;padding:22px;margin:26px 0}
+  .call .eyebrow{margin-bottom:10px}
+  .call h3{font-family:"Bricolage Grotesque",serif;font-weight:500;font-size:19px;margin-bottom:10px}
+  .call p{margin:0 0 12px;font-size:15.5px;line-height:1.6;color:var(--moss)}
+  .call p:last-child{margin-bottom:0}
+  .call strong{color:var(--ink);font-weight:600}
+
+  /* competitor teardown */
+  .rival{border-top:1px solid var(--line);padding:22px 0 4px}
+  .rival:last-of-type{border-bottom:1px solid var(--line);padding-bottom:22px}
+  .rival .who{
+    display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:12px;
+  }
+  .rival .who b{font-family:"Bricolage Grotesque",serif;font-weight:600;font-size:20px;letter-spacing:-.015em}
+  .rival .who span{font-size:13px;color:var(--moss);font-weight:500}
+  .rival ul{list-style:none;padding:0;margin:0}
+  .rival ul li{
+    position:relative;padding:0 0 9px 17px;font-size:15.5px;line-height:1.55;color:var(--moss);
+  }
+  .rival ul li::before{
+    content:"";position:absolute;left:0;top:9px;width:5px;height:5px;
+    border-radius:50%;background:#BFCBC4;
+  }
+  .rival ul li b{color:var(--ink);font-weight:600}
+
+  .phases{list-style:none;padding:0;margin:30px 0 0;counter-reset:ph}
+  .phases li{
+    counter-increment:ph;position:relative;padding:0 0 26px 46px;
+    border-left:1px solid var(--line);margin-left:11px;
+  }
+  .phases li:last-child{border-left-color:transparent;padding-bottom:0}
+  .phases li::before{
+    content:counter(ph);position:absolute;left:-12px;top:-2px;
+    width:23px;height:23px;border-radius:50%;background:var(--pine);color:#fff;
+    font-size:11.5px;font-weight:600;display:flex;align-items:center;justify-content:center;
+  }
+  .phases h3{margin-bottom:2px}
+  .phases p{margin:0;font-size:15.5px;line-height:1.6;color:var(--moss)}
+
+  .map{margin:30px 0 0;border-top:1px solid var(--line)}
+  .map .row{
+    display:grid;grid-template-columns:1fr 1fr;gap:24px;
+    padding:20px 0;border-bottom:1px solid var(--line);
+  }
+  .map .row div:first-child{font-size:15.5px;font-weight:500;line-height:1.5}
+  .map .row div:last-child{font-size:15.5px;color:var(--moss);line-height:1.55}
+  .map .head{padding:0 0 10px}
+  .map .head div{font-size:11px !important;letter-spacing:.13em;text-transform:uppercase;color:var(--moss);font-weight:600}
+
+  .duo{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:30px}
+  .card{background:var(--wash);border-radius:10px;padding:22px}
+  .card .eyebrow{margin-bottom:10px}
+  .card p{margin:0;font-size:15px;line-height:1.55;color:var(--moss)}
+
+  .scale{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:20px;
+    margin:30px 0;padding:24px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  }
+  .scale b{
+    display:block;font-family:"Bricolage Grotesque",serif;font-weight:500;
+    font-size:26px;line-height:1.1;letter-spacing:-.02em;margin-bottom:6px;
+  }
+  .scale span{font-size:13px;line-height:1.4;color:var(--moss)}
+
+  .band{background:var(--pine);color:#EAF1EC;margin:76px 0;padding:40px 0;border-radius:12px}
+  .band-in{max-width:1140px;margin:0 auto;padding:0 32px}
+  .band .eyebrow{color:#8FB3A6}
+  .band h2{color:#fff;margin-bottom:8px;font-size:26px}
+  .figs{display:grid;grid-template-columns:1fr 1fr;gap:24px 28px;margin-top:26px}
+  .fig b{
+    display:block;font-family:"Bricolage Grotesque",serif;font-weight:500;
+    font-size:28px;line-height:1;letter-spacing:-.03em;color:#fff;margin-bottom:8px;
+  }
+  .fig span{font-size:14px;line-height:1.45;color:#A9C6BB}
+  .band-note{
+    margin-top:34px;padding-top:24px;border-top:1px solid rgba(255,255,255,.16);
+    font-size:15.5px;color:#C3D8CF;
+  }
+  .band-note strong{color:#fff;font-weight:500}
+
+  .part{margin:0 0 46px;padding:34px 0 0;border-top:2px solid var(--ink)}
+  .part .num{
+    font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--moss);font-weight:600;margin:0 0 12px;
+  }
+  .part h2{font-size:34px;margin-bottom:14px}
+  .part p{font-size:17px;color:var(--moss);margin:0}
+
+  .figbox{
+    margin:32px 0 0;border:1px solid rgba(14,59,49,.24);border-radius:11px;
+    background:linear-gradient(180deg,#F5F9F6 0%,#EBF2ED 100%);
+    padding:16px 20px 6px;
+  }
+  .figbox .lbl{
+    display:flex;align-items:center;gap:8px;
+    font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--pine);font-weight:700;margin:0 0 4px;
+  }
+  .figbox .lbl::before{
+    content:"";width:11px;height:11px;border-radius:3px;background:var(--pine);flex:none;
+  }
+  .figbox a{
+    display:flex;align-items:center;gap:12px;
+    font-size:15px;font-weight:500;color:var(--pine);text-decoration:none;
+    padding:11px 0;border-top:1px solid rgba(14,59,49,.13);
+  }
+  .figbox a:first-of-type{border-top:1px solid rgba(14,59,49,.13)}
+  .figbox a::after{content:"↗";margin-left:auto;font-size:15px;opacity:.45}
+  .figbox a:hover{color:var(--ink)}
+  .figbox a:hover::after{opacity:.9}
+
+  .fig-link{
+    display:inline-flex;align-items:center;gap:7px;
+    font-size:13.5px;font-weight:500;color:var(--pine);
+    text-decoration:none;border-bottom:1px solid rgba(14,59,49,.28);padding-bottom:1px;
+  }
+  .fig-link:hover{border-bottom-color:var(--pine)}
+
+  .gate{
+    border:1px solid var(--line);border-radius:10px;background:var(--wash);
+    padding:18px 20px;margin:26px 0 0;
+  }
+  .gate p{margin:0;font-size:14.5px;color:var(--moss);line-height:1.55}
+  .gate p + p{margin-top:10px}
+
+  .pager{
+    max-width:1140px;margin:0 auto;padding:0 40px 80px;
+    display:grid;grid-template-columns:1fr 1fr;gap:16px;
+  }
+  .pager a{border:1px solid var(--line);border-radius:10px;padding:22px;text-decoration:none;font-size:17px;font-weight:500}
+  .pager a:hover{border-color:var(--pine)}
+  .pager .eyebrow{margin-bottom:8px}
+  .pager .next{text-align:right}
+
+  .modes{display:flex;gap:2px;background:var(--wash);border-radius:999px;padding:3px}
+  .modes button{
+    font:inherit;font-size:12.5px;font-weight:500;color:var(--moss);
+    background:none;border:0;padding:6px 13px;border-radius:999px;cursor:pointer;line-height:1.2;
+  }
+  .modes button[aria-pressed="true"]{background:var(--white);color:var(--ink);box-shadow:0 1px 2px rgba(15,30,26,.09)}
+  .modes button:focus-visible{outline:2px solid var(--pine);outline-offset:2px}
+
+  #brief{display:none}
+  body.brief #brief{display:block}
+  body.brief .doc > section{display:none}
+  body.brief .doc > .part{display:none}
+  body.brief .doc > figure{display:none}
+  body.brief .band{display:none}
+
+  #brief .row{
+    display:grid;grid-template-columns:150px minmax(0,1fr);gap:24px;
+    padding:20px 0;border-bottom:1px solid var(--line);
+  }
+  #brief .row:first-of-type{border-top:1px solid var(--line)}
+  #brief .row h3{margin:0;font-size:14px;color:var(--moss);font-weight:600}
+  #brief .row p{margin:0;font-size:16px;line-height:1.55}
+  #brief .more{margin-top:30px;font-size:15px;color:var(--moss)}
+  #brief .more button{
+    font:inherit;font-size:15px;color:var(--pine);background:none;border:0;padding:0;
+    cursor:pointer;text-decoration:underline;text-underline-offset:3px;
+  }
+
+  @media (max-width:900px){
+    .shell{grid-template-columns:minmax(0,1fr);gap:36px;padding:32px 22px 0}
+    .rail{position:static}
+    .topbar{padding:14px 22px;gap:12px}
+    .duo,.figs,.map .row,.pair{grid-template-columns:1fr}
+    .scale{grid-template-columns:1fr 1fr;gap:18px}
+    .showcase,.showcase.flip{grid-template-columns:1fr;gap:22px}
+    .showcase .shot,.showcase.flip .shot{order:0;max-width:260px}
+    .showcase .body{text-align:left}
+    .band{padding:32px 0;margin:56px 0}
+    .band-in,.pager{padding-left:22px;padding-right:22px}
+    .pager{grid-template-columns:1fr}
+    .pager .next{text-align:left}
+    .part h2{font-size:27px}
+    #brief .row{grid-template-columns:1fr;gap:6px;padding:16px 0}
+    .modes button{padding:6px 11px;font-size:12px}
+  }
+</style>
+
+<style>
+  .slots{display:grid;grid-template-columns:1fr 1fr;gap:1px;margin:30px 0 0;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+  .slots .s{background:#fff;padding:16px 18px}
+  .slots .s b{display:block;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--moss);font-weight:700;margin-bottom:6px}
+  .slots .s p{margin:0;font-size:15px;line-height:1.5}
+  .sub-h{font-family:"Bricolage Grotesque",serif;font-weight:600;font-size:22px;line-height:1.2;letter-spacing:-.018em;margin:0 0 14px}
+  .sub-n{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--moss);font-weight:600;margin:0 0 8px}
+  .sub{margin:0 0 54px}
+  .sub:last-child{margin-bottom:0}
+  .tokens{margin:30px 0 0;border-top:1px solid var(--ink)}
+  .tokens .r{display:grid;grid-template-columns:132px minmax(0,1fr);gap:22px;padding:15px 0;border-bottom:1px solid var(--line);align-items:start}
+  .tokens .r > b{display:flex;align-items:center;gap:9px;font-size:15px;font-weight:600}
+  .tokens .r > b i{width:11px;height:11px;border-radius:3px;flex:none}
+  .tokens .r > span{font-size:15px;line-height:1.55;color:var(--moss)}
+  .colophon{border-top:1px solid var(--line);margin-top:60px;padding-top:20px;display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--moss);font-weight:600}
+  .screens{display:grid;gap:26px 20px;margin:30px 0 0}
+  .screens.c4{grid-template-columns:repeat(4,1fr)}
+  .screens.c3{grid-template-columns:repeat(3,1fr)}
+  .screens .sc .ph{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--wash);box-shadow:0 12px 26px -14px rgba(15,30,26,.22)}
+  .screens .sc img{width:100%;display:block}
+  .screens .sc b{display:block;margin:12px 0 4px;font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--moss);font-weight:700}
+  .screens .sc p{margin:0;font-size:13.5px;line-height:1.45;color:var(--ink)}
+  @media (max-width:900px){.screens.c4,.screens.c3{grid-template-columns:1fr 1fr}.slots{grid-template-columns:1fr}.tokens .r{grid-template-columns:1fr;gap:6px}}
+</style>
+
+<style>
+  .cat{margin:0 0 76px}
+  .cat:last-child{margin-bottom:0}
+  .cat h3{font-family:"Bricolage Grotesque",serif;font-weight:600;font-size:23px;line-height:1.2;letter-spacing:-.018em;margin:0 0 12px}
+  .cat > p{margin:0 0 26px;color:var(--moss)}
+  .plate{display:grid;gap:22px;padding:26px;border:1px solid var(--line);border-radius:20px;background:var(--wash)}
+  .plate.two{grid-template-columns:1fr 1fr}
+  .plate.one{grid-template-columns:1fr}
+  .art{margin:0}
+  .art .win{position:relative;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff}
+  .art .win.phone{aspect-ratio:716/976}
+  .art .win.wide{aspect-ratio:1440/976}
+  .art .win.wide video{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block}
+  .art img,.art video{display:block;width:100%;background:#FDF8EE}
+  .art .win.phone img,.art .win.phone video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .art figcaption{margin:11px 0 0;font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--moss);font-weight:700}
+  .objectives{margin:22px 0 0;padding:0;list-style:none;counter-reset:o}
+  .objectives li{counter-increment:o;position:relative;padding:12px 0 12px 38px;border-bottom:1px solid var(--line);font-size:16px;line-height:1.55}
+  .objectives li:first-child{border-top:1px solid var(--ink)}
+  .objectives li::before{content:counter(o);position:absolute;left:0;top:13px;font-size:12px;font-weight:700;color:var(--moss)}
+  .credit{margin:66px 0 0;padding-top:20px;border-top:1px solid var(--line);font-size:13.5px;line-height:1.6;color:var(--moss)}
+  .swatches{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:16px;overflow:hidden;margin:30px 0 0}
+  .sw{background:#fff}
+  .sw .chip{height:104px}
+  .sw .meta{padding:13px 15px}
+  .sw .meta b{display:block;font-size:13.5px;font-weight:600;line-height:1.3}
+  .sw .meta span{display:block;margin-top:3px;font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--moss);font-weight:600}
+  .neutrals{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:16px;overflow:hidden;margin:18px 0 0}
+  .neutrals .chip{height:70px}
+  .typespec{margin:30px 0 0;border-top:1px solid var(--ink)}
+  .typespec .row{display:grid;grid-template-columns:150px minmax(0,1fr);gap:24px;padding:20px 0;border-bottom:1px solid var(--line);align-items:baseline}
+  .typespec .row > span{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--moss);font-weight:700}
+  .typespec .row > div{min-width:0}
+  .typespec .row em{display:block;margin-top:7px;font-style:normal;font-size:12px;letter-spacing:.06em;color:var(--moss)}
+  @media (max-width:760px){.plate.two{grid-template-columns:1fr}.plate{padding:18px}.swatches{grid-template-columns:repeat(2,1fr)}.neutrals{grid-template-columns:repeat(3,1fr)}.typespec .row{grid-template-columns:1fr;gap:8px}}
+</style>
+  <script type="module" src="/src/hover.js"></script>
+</head>
+<body>
+
+<header class="topbar">
+  <a href="/#work">← Back to work</a>
+  <strong>Deeksha</strong>
+</header>
+
+<div class="shell">
+  <aside class="rail">
+    <div class="tags">
+      <span class="tag">Visual design</span>
+      <span class="tag">Apna Store</span>
+      <span class="tag">iOS</span>
+      <span class="tag">2025–26</span>
+      <span class="tag">Sample projects</span>
+    </div>
+    <dl class="facts">
+      <dt>Product</dt>
+      <dd>Apna Store, a curation-led grocery app</dd>
+
+      <dt>Role</dt>
+      <dd>Visual design, category landing pages, photography direction</dd>
+
+      <dt>Categories</dt>
+      <dd>Fresh · Groceries · Home &amp; kitchen · Health</dd>
+
+      <dt>Campaigns</dt>
+      <dd>Festive · Themes · Homepage banners</dd>
+
+      <dt>Worked with</dt>
+      <dd>Co-founder, category heads, merchandising, marketing</dd>
+
+      <dt>Platform</dt>
+      <dd>iOS, 390 pt base</dd>
+    </dl>
+  </aside>
+
+  <article class="doc">
+
+    <p class="eyebrow">Visual design · Apna Store · iOS · 2025–26</p>
+    <h1>Visual design<br />showcase</h1>
+
+    <p class="lede">Apna Store set out to build a curation-led shopping experience that stands apart from the noise of mainstream e-commerce. The visual system had to carry that promise on every category page.</p>
+
+    <section>
+      <p>The work spanned catalogue photography systems, category landing page design and end-to-end visual direction, shaped in close collaboration with the co-founder, category heads, merchandising and marketing teams.</p>
+      <p>The core question driving all of it was simple: why should a customer choose Apna Store? Four things had to be true for the answer to land.</p>
+      <ol class="objectives">
+        <li>Establish a distinct visual identity that reflects Apna Store's curation-first philosophy.</li>
+        <li>Hold consistent, high quality visual presentation across every product category.</li>
+        <li>Build trust through quality and intent-led design at every touchpoint.</li>
+        <li>Let merchandising and category teams communicate product value without visual clutter.</li>
+      </ol>
+    </section>
+
+    <div class="part">
+      <p class="num">01 &nbsp;·&nbsp; Category landing pages</p>
+      <h2>Four categories, one visual language</h2>
+      <p>Each category leads with the argument it wins on, so the header colour, the photography style and the grid rhythm change while the underlying structure stays the same.</p>
+    </div>
+
+    <section>
+      <div class="cat">
+        <h3>Fresh</h3>
+        <p>I used a mix of macro focus and lifestyle setting to highlight the quality of the produce. This was Apna Store’s top selling category.</p>
+        <div class="plate two"><figure class="art"><div class="win phone"><img src="/uploads/cs3-a1.webp" alt="Fresh — landing page" /></div><figcaption>Fresh — landing page</figcaption></figure><figure class="art"><div class="win phone"><video src="/uploads/cs3-a2.webm" poster="/uploads/cs3-a1.webp" autoplay muted loop playsinline preload="metadata"></video></div><figcaption>Fresh — scroll</figcaption></figure></div>
+      </div>
+
+      <div class="cat">
+        <h3>Groceries</h3>
+        <p>My main objective here was to communicate the largest variety of daily groceries. This was Apna Store’s second highest selling category.</p>
+        <div class="plate two"><figure class="art"><div class="win phone"><img src="/uploads/cs3-b1.webp" alt="Groceries — landing page" /></div><figcaption>Groceries — landing page</figcaption></figure><figure class="art"><div class="win phone"><video src="/uploads/cs3-b2.webm" poster="/uploads/cs3-b1.webp" autoplay muted loop playsinline preload="metadata"></video></div><figcaption>Groceries — scroll</figcaption></figure></div>
+      </div>
+
+      <div class="cat">
+        <h3>Home &amp; kitchen</h3>
+        <p>This was the first non-food category for Apna Store. The quality-first philosophy carried through here too, through glass surfaces, clean functional type and a palette that extends the one built for the food categories.</p>
+        <div class="plate two"><figure class="art"><div class="win phone"><img src="/uploads/cs3-c1.webp" alt="Home &amp; kitchen — landing page" /></div><figcaption>Home &amp; kitchen — landing page</figcaption></figure><figure class="art"><div class="win phone"><video src="/uploads/cs3-c2.webm" poster="/uploads/cs3-c1.webp" autoplay muted loop playsinline preload="metadata"></video></div><figcaption>Home &amp; kitchen — scroll</figcaption></figure></div>
+      </div>
+
+      <div class="cat">
+        <h3>Health</h3>
+        <p>The health page needed an even stricter approach to the ingredient list. I wanted it to communicate the purity and quality of these products.</p>
+        <div class="plate two"><figure class="art"><div class="win phone"><img src="/uploads/cs3-d1.webp" alt="Health — landing page" /></div><figcaption>Health — landing page</figcaption></figure><figure class="art"><div class="win phone"><video src="/uploads/cs3-d2.webm" poster="/uploads/cs3-d1.webp" autoplay muted loop playsinline preload="metadata"></video></div><figcaption>Health — scroll</figcaption></figure></div>
+      </div>
+
+      <div class="cat">
+        <h3>Festive</h3>
+        <p>Here I brought back the colours of the season and communicated the festive mood alongside the usual highly curated products. These examples are from the nine days of Navratri.</p>
+        <div class="plate two"><figure class="art"><div class="win phone"><video src="/uploads/cs3-e1-2cbd3235.webm" autoplay muted loop playsinline preload="metadata"></video></div><figcaption>Festive — Navratri, day pages</figcaption></figure><figure class="art"><div class="win phone"><video src="/uploads/cs3-e2-8aadf929.webm" autoplay muted loop playsinline preload="metadata"></video></div><figcaption>Festive — Navratri, product rails</figcaption></figure></div>
+      </div>
+
+      <div class="cat">
+        <h3>Themes</h3>
+        <p>These pages usually drive specific private label products or offers tied to a lifestyle festival, like Valentine’s Day.</p>
+        <div class="plate one"><figure class="art"><div class="win"><img src="/screens/cs3-themes.webp" alt="Themes — private label and Valentine’s Day pages" /></div><figcaption>Themes — private label and Valentine’s Day pages</figcaption></figure></div>
+      </div>
+
+    </section>
+
+    <div class="part">
+      <p class="num">02 &nbsp;·&nbsp; Visuals</p>
+      <h2>Communication surfaces</h2>
+      <p>Everything outside the category page that still has to look like the same product: homepage banners and the screen customers check most often.</p>
+    </div>
+
+    <section>
+      <div class="cat">
+        <div class="plate one"><figure class="art"><div class="win wide"><video src="/uploads/cs3-g1-ecd7c2c7.webm" autoplay muted loop playsinline preload="metadata"></video></div><figcaption>Homepage — banner rail</figcaption></figure></div>
+      </div>
+
+      <div class="cat">
+        <h3>Communication: Order tracking</h3>
+        <p>I designed this to reinforce the why Apna Store part of the experience at a moment customers check often.</p>
+        <div class="plate one"><figure class="art"><div class="win"><img src="/uploads/desktop-cs3-h1.webp" alt="Order tracking — three campaign states" /></div><figcaption>Order tracking — three campaign states</figcaption></figure></div>
+      </div>
+    </section>
+
+    <div class="part">
+      <p class="num">03 &nbsp;·&nbsp; Colour &amp; type</p>
+      <h2>The system underneath</h2>
+      <p>Category identity is carried almost entirely by one colour and one photographic treatment in the top third of the screen. Everything below it, the grid, the type and the neutrals, is shared.</p>
+    </div>
+
+    <section>
+      <div class="cat">
+        <h3>Category colour</h3>
+        <p>One hue per category, used on the header band and nowhere else. Sampled from the shipped pages.</p>
+        <div class="swatches">
+          <div class="sw"><div class="chip" style="background:#33593C"></div><div class="meta"><b>Fresh green</b><span>#33593C</span><span>Produce</span></div></div>
+          <div class="sw"><div class="chip" style="background:#9C6B45"></div><div class="meta"><b>Grocery terracotta</b><span>#9C6B45</span><span>Staples</span></div></div>
+          <div class="sw"><div class="chip" style="background:#A3D3FC"></div><div class="meta"><b>Kitchen sky</b><span>#A3D3FC</span><span>Home &amp; kitchen</span></div></div>
+          <div class="sw"><div class="chip" style="background:#F8E4EF"></div><div class="meta"><b>Health blush</b><span>#F8E4EF</span><span>Wellness</span></div></div>
+        </div>
+        <div class="neutrals">
+          <div class="sw"><div class="chip" style="background:#FDF8EE"></div><div class="meta"><b>Cream</b><span>#FDF8EE</span></div></div>
+          <div class="sw"><div class="chip" style="background:#EDE5D0"></div><div class="meta"><b>Sand</b><span>#EDE5D0</span></div></div>
+          <div class="sw"><div class="chip" style="background:#EF91A1"></div><div class="meta"><b>Campaign pink</b><span>#EF91A1</span></div></div>
+          <div class="sw"><div class="chip" style="background:#85837A"></div><div class="meta"><b>Muted ink</b><span>#85837A</span></div></div>
+          <div class="sw"><div class="chip" style="background:#44433C"></div><div class="meta"><b>Ink</b><span>#44433C</span></div></div>
+        </div>
+        <p class="note" style="margin-top:14px">Cream is the page ground in every category, so a customer moving from Fresh to Health sees the colour change at the top and nothing else shift.</p>
+      </div>
+
+      <div class="cat">
+        <h3>Type scale</h3>
+        <p>Weight and size carry the ranking on every page. The roles below run largest to smallest. The specimen is set in this page’s own faces, and each row names the family and size it is rendered at.</p>
+        <div class="typespec">
+          <div class="row"><span>Campaign display</span><div><div style="font-family:'Bricolage Grotesque',serif;font-weight:600;font-size:34px;line-height:1.08;letter-spacing:-.02em">Modern essentials<br />for every kitchen</div><em>Bricolage Grotesque Semibold · 34 / 37 px &nbsp;·&nbsp; campaign banners only</em></div></div>
+          <div class="row"><span>Section heading</span><div><div style="font-size:20px;font-weight:600;line-height:1.3">Shop by category</div><em>Inter Semibold · 20 / 26 px &nbsp;·&nbsp; one per rail</em></div></div>
+          <div class="row"><span>Product title</span><div><div style="font-size:15px;font-weight:500;line-height:1.4">Think Snack by Namdharis Chilli Potato</div><em>Inter Medium · 15 / 21 px &nbsp;·&nbsp; two lines, then truncate</em></div></div>
+          <div class="row"><span>Meta</span><div><div style="font-size:12.5px;line-height:17px;color:#6B6659">200g &nbsp;·&nbsp; Delivery in 30 mins</div><em>Inter Regular · 12.5 / 17 px &nbsp;·&nbsp; weight, delivery promise, address</em></div></div>
+          <div class="row"><span>Price</span><div><div style="display:flex;align-items:baseline;gap:9px"><span style="font-size:19px;font-weight:600">₹77</span><span style="font-size:13px;color:#6B6659;text-decoration:line-through">₹86</span></div><em>Inter Semibold 19 px over Regular 13 px struck</em></div></div>
+          <div class="row"><span>Label</span><div><div style="font-size:11px;letter-spacing:.13em;text-transform:uppercase;font-weight:700;color:#6B6659">Palm oil free</div><em>Inter Bold · 11 px · 0.13em tracking &nbsp;·&nbsp; badges and chips</em></div></div>
+        </div>
+      </div>
+
+      <p class="credit">Visual design at Apna Store, 2025–26. The category, festive and campaign work shown here was done with the Apna Store design, merchandising and marketing teams, and parts of it appear in teammates' portfolios as well.</p>
+    </section>
+
+</article>
+</div>
+
+<nav class="pager" style="margin-top:96px">
+  <a href="/work/quick-and-rider/"><p class="eyebrow">Previous</p>Quick &amp; Rider, both ends of the route</a>
+  <a href="/work/shiprocket-agentic/" class="next"><p class="eyebrow">Next</p>Shiprocket Agentic, rebuilding a seller panel as a system that acts</a>
+</nav>
+
+<script>
+(function () {
+  var vids = [].slice.call(document.querySelectorAll('video'));
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      var v = e.target;
+      if (e.isIntersecting) {
+        if (v.preload !== 'auto') { v.preload = 'auto'; v.load(); }
+        var p = v.play();
+        if (p && p.catch) p.catch(function () {});
+      } else if (!v.paused) {
+        v.pause();
+      }
+    });
+  }, { rootMargin: '200px 0px', threshold: 0.1 });
+  vids.forEach(function (v) { io.observe(v); });
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deeksha Gahlot — Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&amp;family=Space+Grotesk:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&amp;family=Dancing+Script:wght@700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+  html { scroll-behavior: smooth; }
+  html, body { margin: 0; padding: 0; background: #F4F0E6; }
+  * { box-sizing: border-box; }
+  a { color: #2B2A26; text-decoration: none; cursor: pointer; }
+  a:hover { color: #8A6A44; }
+  ::selection { background: #E4D6BE; }
+
+
+
+  @keyframes floaty { 0%, 100% { transform: translate3d(0,0,0) } 50% { transform: translate3d(0,-9px,0) } }
+  @keyframes floatyb { 0%, 100% { transform: translate3d(0,0,0) } 50% { transform: translate3d(0,7px,0) } }
+  .cs-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4.5vw 3.5vw; }
+  @media (max-width: 760px) { .cs-grid { grid-template-columns: 1fr; gap: 40px; } }
+  @keyframes tape { 0% { transform: translateX(0) } 100% { transform: translateX(-50%) } }
+  .om-scroll::-webkit-scrollbar { height: 6px; }
+  .om-scroll::-webkit-scrollbar-thumb { background: #DED4BF; border-radius: 99px; }
+  .om-scroll::-webkit-scrollbar-track { background: transparent; }
+</style>
+
+  <script type="module" src="/src/portfolio.js"></script>
+</head>
+<body>
+<div data-root="1" style="font-family: 'Plus Jakarta Sans', Helvetica, sans-serif; color: #2B2A26; background: #F4F0E6; overflow-x: hidden; position: relative">
+
+  <section id="top" data-screen-label="Hero" style="position: relative; min-height: 100vh; height: 78vw; max-height: 1180px; min-height: 760px; overflow: hidden">
+
+    <div data-curtain="1" style="position: absolute; inset: 0; z-index: 90; display: none; pointer-events: none; overflow: hidden">
+      <div data-curtain-panel="left" style="position: absolute; left: 0; top: 0; bottom: 0; width: 52%; background: repeating-linear-gradient(90deg, #6E1B24 0 2.2%, #8A2530 2.2% 3.6%, #5C151D 3.6% 5%); box-shadow: inset -30px 0 60px rgba(0,0,0,0.45), 12px 0 40px rgba(0,0,0,0.3); transition: transform 2.4s cubic-bezier(.35,.02,.2,1)"></div>
+      <div data-curtain-panel="right" style="position: absolute; right: 0; top: 0; bottom: 0; width: 52%; background: repeating-linear-gradient(90deg, #5C151D 0 1.4%, #8A2530 1.4% 2.8%, #6E1B24 2.8% 5%); box-shadow: inset 30px 0 60px rgba(0,0,0,0.45), -12px 0 40px rgba(0,0,0,0.3); transition: transform 2.4s cubic-bezier(.35,.02,.2,1)"></div>
+      <div data-curtain-valance="1" style="position: absolute; left: 0; right: 0; top: 0; height: 9%; background: repeating-linear-gradient(90deg, #6E1B24 0 1.6%, #8A2530 1.6% 3.2%); border-bottom: 3px solid #C79A4E; box-shadow: 0 10px 26px rgba(0,0,0,0.35)"></div>
+    </div>
+
+    <div data-grid="1" style="position: absolute; left: 12%; right: 12%; top: 8%; bottom: 10%; background-image: linear-gradient(to right, #E8E0CC 1px, transparent 1px), linear-gradient(to bottom, #E8E0CC 1px, transparent 1px); background-size: 4.2vw 4.2vw; opacity: 0.9; pointer-events: none"></div>
+
+    <nav style="position: absolute; z-index: 40; top: 2.4vw; left: 0; right: 0; display: flex; justify-content: center; align-items: center; gap: 1vw; padding: 0 4vw">
+      <a href="#top" style="width: 4.4vw; height: 4.4vw; min-width: 52px; min-height: 52px; border-radius: 999px; background: #FBF8F0; border: 1px solid #E7DFCB; box-shadow: 0 6px 18px rgba(120,104,72,0.10); display: flex; align-items: center; justify-content: center; font-family: 'EB Garamond', serif; font-size: clamp(19px, 1.7vw, 30px); letter-spacing: 0.02em; color: #9D7A54; flex: none" style-hover="transform: translateY(-2px)">DG</a>
+      <div style="display: flex; align-items: center; gap: 2.4vw; height: 4.4vw; min-height: 52px; padding: 0 2.6vw; border-radius: 999px; background: #FBF8F0; border: 1px solid #E7DFCB; box-shadow: 0 8px 24px rgba(120,104,72,0.10)">
+        <a href="#work" style="display: flex; align-items: center; gap: 0.6vw; font-size: 1.15vw; font-weight: 700; color: #2B2A26; white-space: nowrap" style-hover="opacity: 0.6">
+          <svg width="1.35vw" height="1.35vw" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" style="width: 1.35vw; height: 1.35vw; min-width: 16px"><path d="M3 7.5A1.5 1.5 0 0 1 4.5 6h4l2 2.5h8A1.5 1.5 0 0 1 20 10v7.5a1.5 1.5 0 0 1-1.5 1.5h-14A1.5 1.5 0 0 1 3 17.5z"></path></svg>
+          Work
+        </a>
+        <a href="#journal" style="display: flex; align-items: center; gap: 0.6vw; font-size: 1.15vw; font-weight: 500; color: #7A7466; white-space: nowrap" style-hover="color: #2B2A26">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" style="width: 1.35vw; height: 1.35vw; min-width: 16px"><circle cx="12" cy="12" r="9"></circle><path d="M8.5 14.5c1 1.3 2.1 2 3.5 2s2.5-.7 3.5-2M9 10h.01M15 10h.01"></path></svg>
+          About
+        </a>
+        <a href="#playground" style="display: flex; align-items: center; gap: 0.6vw; font-size: 1.15vw; font-weight: 500; color: #7A7466; white-space: nowrap" style-hover="color: #2B2A26">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" style="width: 1.35vw; height: 1.35vw; min-width: 16px"><rect x="3" y="4.5" width="18" height="15" rx="2.5"></rect><circle cx="9" cy="10" r="1.5"></circle><path d="M4 17l5-4.5 4 3.5 3-2.5 4 3.5"></path></svg>
+          Playground
+        </a>
+        <a href="/uploads/Deeksha_Gahlot_Resume.pdf" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 0.6vw; font-size: 1.15vw; font-weight: 500; color: #7A7466; white-space: nowrap; cursor: pointer" style-hover="color: #2B2A26">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" style="width: 1.35vw; height: 1.35vw; min-width: 16px"><path d="M14 3.5H7A1.5 1.5 0 0 0 5.5 5v14A1.5 1.5 0 0 0 7 20.5h10A1.5 1.5 0 0 0 18.5 19V8z"></path><path d="M14 3.5V8h4.5M8.5 12.5h7M8.5 16h5"></path></svg>
+          Resume
+        </a>
+      </div>
+    </nav>
+
+    <div data-obj="1" data-rot="-2" data-depth="1.1" data-delay="60" data-keep="1" data-clean="-9,-4,-8" style="position: absolute; left: 9%; top: 6.5%; width: 11%; z-index: 6; transition: transform 1s cubic-bezier(.2,.8,.2,1), opacity .7s ease">
+      <div style="animation: floaty 7.5s ease-in-out infinite">
+        <img src="/uploads/pasted-1788545548345-0.webp" alt="Starry Night sticker" style="display: block; width: 100%; height: auto; filter: drop-shadow(0 10px 22px rgba(120,104,72,0.18))">
+      </div>
+    </div>
+
+    <div data-obj="1" data-rot="0" data-depth="1.5" data-delay="0" data-keep="1" data-clean="-12,-2,-16" style="position: absolute; left: 10%; top: 26%; width: 14.5%; z-index: 7; transition: transform 1s cubic-bezier(.2,.8,.2,1), opacity .7s ease">
+      <div style="animation: floatyb 9s ease-in-out infinite">
+        <img src="/uploads/pasted-1788546274306-0.webp" alt="Rotary telephone" style="display: block; width: 100%; height: auto; filter: drop-shadow(0 12px 24px rgba(120,104,72,0.18))">
+      </div>
+    </div>
+
+    <div data-obj="1" data-rot="-8" data-depth="1.2" data-delay="120" data-keep="1" data-clean="-11,14,-24" style="position: absolute; left: 22.5%; top: 25.5%; width: 8.5%; z-index: 8; transition: transform 1s cubic-bezier(.2,.8,.2,1), opacity .7s ease">
+      <div style="animation: floaty 8.2s ease-in-out infinite">
+        <img src="/uploads/pasted-1788545588536-0.webp" alt="Headphones" style="display: block; width: 100%; height: auto; filter: drop-shadow(0 10px 20px rgba(120,104,72,0.16))">
+      </div>
+    </div>
+
+    <div data-obj="1" data-rot="4" data-depth="1.35" data-delay="40" data-keep="1" data-clean="-19,7,-40" style="position: absolute; left: 36%; top: 23.5%; width: 11.5%; z-index: 8; transition: transform 1s cubic-bezier(.2,.8,.2,1), opacity .7s ease">
+      <div style="animation: floatyb 10s ease-in-out infinite">
+        <img src="/uploads/pasted-1788545649971-0.webp" alt="Vinyl record" style="display: block; width: 100%; height: auto; filter: drop-shadow(0 10px 20px rgba(120,104,72,0.16))">
+      </div>
+    </div>
+
+    <div data-obj="1" data-rot="-3" data-depth="1.15" data-delay="80" data-keep="1" data-clean="26,4,12" style="position: absolute; left: 53%; top: 11%; width: 11%; z-index: 9; transition: transform 1s cubic-bezier(.2,.8,.2,1), opacity .7s ease">
+      <div style="animation: floaty 8.8s ease-in-out infinite">
+        <img src="/uploads/pasted-1788545793761-0.webp" alt="Stack of books" style="display: block; width: 100%; height: auto; filter: drop-shadow(0 10px 20px rgba(120,104,72,0.16))">
+      </div>
+    </div>
+
+    <div data-obj="1" data-rot="6" data-depth="1" data-delay="160" data-keep="1" data-clean="20,26,18" style="position: absolute; left: 65%; top: 13%; width: 5.2%; z-index: 9; transition: transform 1s cubic-bezier(.2,.8,.2,1), opacity .7s ease">
+      <div style="animation: floatyb 7.4s ease-in-out infinite">
+        <img src="/uploads/pasted-1788545661792-0.webp" alt="Iced coffee" style="display: block; width: 100%; height: auto; filter: drop-shadow(0 10px 20px rgba(120,104,72,0.16))">
+      </div>
+    </div>
+
+    <div data-obj="1" data-rot="-6" data-depth="1.05" data-delay="200" data-keep="1" data-clean="17,23,-14" style="position: absolute; left: 70.5%; top: 6%; width: 7.6%; z-index: 9; transition: transform 1s cubic-bezier(.2,.8,.2,1), opacity .7s ease">
+      <div style="animation: floaty 9.4s ease-in-out infinite">
+        <img src="/uploads/pasted-1788545671657-0.webp" alt="Croissant" style="display: block; width: 100%; height: auto; filter: drop-shadow(0 10px 20px rgba(120,104,72,0.16))">
+      </div>
+    </div>
+
+    <div data-obj="1" data-rot="0" data-depth="1.3" data-delay="20" data-keep="1" data-clean="10,-13,10" style="position: absolute; left: 75.5%; top: 17.5%; width: 12%; z-index: 10; transition: transform 1s cubic-bezier(.2,.8,.2,1), opacity .7s ease">
+      <div style="animation: floatyb 8s ease-in-out infinite">
+        <img src="/uploads/pasted-1788545421757-0.webp" alt="Figma tools graphic" style="display: block; width: 100%; height: auto; filter: drop-shadow(0 10px 20px rgba(120,104,72,0.16))">
+      </div>
+    </div>
+
+    <div data-obj="1" data-rot="-6" data-depth="1.45" data-delay="150" data-keep="1" data-clean="9,-11,-14" style="position: absolute; left: 88%; top: 29.5%; width: 6.4%; z-index: 11; transition: transform 1s cubic-bezier(.2,.8,.2,1), opacity .7s ease">
+      <div style="animation: floaty 6.8s ease-in-out infinite">
+        <img src="/uploads/pasted-1788545515123-0.webp" alt="Pixel chef mascot" style="display: block; width: 100%; height: auto; image-rendering: pixelated; filter: drop-shadow(0 8px 16px rgba(120,104,72,0.16))">
+      </div>
+    </div>
+
+    <div data-obj="1" data-rot="2" data-depth="1.2" data-delay="100" data-keep="1" data-clean="14,2,10" style="position: absolute; left: 67.5%; top: 37.5%; width: 11%; z-index: 8; transition: transform 1s cubic-bezier(.2,.8,.2,1), opacity .7s ease">
+      <div style="animation: floaty 11s ease-in-out infinite">
+        <img src="/uploads/pasted-1788545802905-0.webp" alt="Tablet and pencil" style="display: block; width: 100%; height: auto; filter: drop-shadow(0 10px 20px rgba(120,104,72,0.16))">
+      </div>
+    </div>
+
+    <div data-obj="1" data-rot="-5" data-depth="1.4" data-delay="0" data-keep="1" data-clean="26,4,8" style="position: absolute; left: 49.5%; top: 46%; width: 14.5%; z-index: 9; transition: transform 1s cubic-bezier(.2,.8,.2,1), opacity .7s ease">
+      <div style="animation: floatyb 9.6s ease-in-out infinite">
+        <div style="display: flex; align-items: flex-end; gap: 4%">
+          <img src="/uploads/pasted-1788545593358-0.webp" alt="Watercolour paint box" style="display: block; width: 42%; height: auto; transform: rotate(-5deg); filter: drop-shadow(0 8px 18px rgba(120,104,72,0.16))">
+          <img src="/uploads/pasted-1788545657314-0.webp" alt="Great Wave sticker" style="display: block; width: 56%; height: auto; transform: rotate(4deg); filter: drop-shadow(0 8px 18px rgba(120,104,72,0.16))">
+        </div>
+      </div>
+    </div>
+
+    <div data-obj="1" data-rot="7" data-depth="1.1" data-delay="140" data-keep="1" data-clean="14,10,16" style="position: absolute; left: 76.5%; top: 45.5%; width: 9.2%; z-index: 10; transition: transform 1s cubic-bezier(.2,.8,.2,1), opacity .7s ease">
+      <div style="animation: floaty 8.6s ease-in-out infinite">
+        <img src="/uploads/pasted-1788545776715-0.webp" alt="Camera" style="display: block; width: 100%; height: auto; filter: drop-shadow(0 10px 20px rgba(120,104,72,0.16))">
+      </div>
+    </div>
+
+    <div data-obj="1" data-rot="-3" data-depth="1.25" data-delay="180" data-keep="1" data-clean="-13,10,-18" style="position: absolute; left: 20%; top: 57%; width: 8.8%; z-index: 8; transition: transform 1s cubic-bezier(.2,.8,.2,1), opacity .7s ease">
+      <div style="animation: floatyb 10.4s ease-in-out infinite">
+        <img src="/uploads/pasted-1788545688187-0.webp" alt="Potted plant" style="display: block; width: 100%; height: auto; filter: drop-shadow(0 10px 20px rgba(120,104,72,0.16))">
+      </div>
+    </div>
+
+    <div data-obj="1" data-rot="0" data-depth="1.5" data-delay="240" data-keep="0" data-clean="-6,26,-22" style="position: absolute; left: 30.5%; top: 58.5%; width: 11%; z-index: 11; transition: transform 1s cubic-bezier(.2,.8,.2,1), opacity .7s ease">
+      <div style="animation: floaty 7.8s ease-in-out infinite">
+        <img src="/uploads/pasted-1788545416576-0.webp" alt="To do list note" style="display: block; width: 100%; height: auto; filter: drop-shadow(0 10px 20px rgba(120,104,72,0.18))">
+      </div>
+    </div>
+
+    <div data-obj="1" data-rot="-4" data-depth="1.3" data-delay="120" data-keep="1" data-clean="-13,4,-16" style="position: absolute; left: 12%; top: 52%; width: 8.5%; z-index: 9; transition: transform 1s cubic-bezier(.2,.8,.2,1), opacity .7s ease">
+      <div style="animation: floatyb 8.4s ease-in-out infinite">
+        <img src="/uploads/pasted-1788545682454-0.webp" alt="Jar of paint brushes" style="display: block; width: 100%; height: auto; filter: drop-shadow(0 8px 16px rgba(120,104,72,0.16))">
+      </div>
+    </div>
+
+    <div data-obj="1" data-rot="0" data-depth="1.5" data-delay="200" data-keep="0" data-clean="-4,24,-10" style="position: absolute; left: 43%; top: 54.5%; width: 4.2%; z-index: 13; transition: transform 1s cubic-bezier(.2,.8,.2,1), opacity .7s ease">
+      <div style="animation: floaty 6.2s ease-in-out infinite">
+        <img src="/uploads/pasted-1788545666502-0.webp" alt="Pixel dinosaur" style="display: block; width: 100%; height: auto; image-rendering: pixelated">
+      </div>
+    </div>
+
+    <div data-obj="1" data-rot="0" data-depth="1.1" data-delay="40" data-keep="1" data-clean="11,-6,8" style="position: absolute; left: 79.5%; top: 74%; width: 3.1%; z-index: 12; transition: transform 1s cubic-bezier(.2,.8,.2,1), opacity .7s ease">
+      <div style="animation: floatyb 7.2s ease-in-out infinite">
+        <img src="/uploads/pasted-1788545675112-0.webp" alt="Pixel cursor" style="display: block; width: 100%; height: auto; image-rendering: pixelated">
+      </div>
+    </div>
+
+    <div data-obj="1" data-rot="4" data-depth="1.1" data-delay="60" data-keep="1" data-journal-open="1" data-clean="12,7,14" style="cursor: pointer; position: absolute; left: 84%; top: 64%; width: 6.4%; z-index: 9; transition: transform 1s cubic-bezier(.2,.8,.2,1), opacity .7s ease">
+      <div style="animation: floatyb 9.2s ease-in-out infinite">
+        <img src="/uploads/pasted-1788546179958-0.webp" alt="Sticker-covered journal" style="display: block; width: 100%; height: auto; filter: drop-shadow(0 10px 20px rgba(120,104,72,0.18))">
+      </div>
+    </div>
+
+    <div data-collage-text="1" style="position: absolute; inset: 0; z-index: 12; pointer-events: none; transition: opacity .55s ease">
+      <h1 style="position: absolute; left: 23.5%; top: 13.5%; margin: 0; padding: 0.5vw 0.9vw; background: #F4F0E6; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 2.4vw; line-height: 1.3; font-weight: 500; letter-spacing: -0.01em; color: #3A3833">THE WORLD IS<br>FULL OF</h1>
+      <h2 style="position: absolute; left: 54.5%; top: 28%; margin: 0; padding: 0.5vw 0.9vw; background: #F4F0E6; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 2.4vw; line-height: 1.3; font-weight: 500; letter-spacing: -0.01em; color: #3A3833">UNFINISHED<br>IDEAS</h2>
+      <h2 style="position: absolute; left: 28%; top: 45.5%; margin: 0; padding: 0.5vw 0.9vw; background: #F4F0E6; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 2.4vw; line-height: 1.3; font-weight: 500; letter-spacing: -0.01em; color: #3A3833">&amp; FRUSTRATING<br>EXPERIENCES</h2>
+      <div style="position: absolute; left: 65%; top: 56.5%; padding: 0.5vw 0.9vw; background: #F4F0E6">
+        <p style="margin: 0 0 0.5vw; font-family: 'EB Garamond', serif; font-size: 1.6vw; line-height: 1.1; color: #3A3833">I design the path</p>
+        <h2 style="margin: 0; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 2.4vw; line-height: 1.3; font-weight: 500; letter-spacing: -0.01em; color: #3A3833">THAT MAKE<br>THEM<br>SEAMLESS</h2>
+      </div>
+    </div>
+
+    <div data-clean-text="1" style="position: absolute; inset: 0; z-index: 12; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; opacity: 0; transform: translateY(14px); transition: opacity .7s ease .35s, transform .8s cubic-bezier(.2,.8,.2,1) .35s; pointer-events: none">
+      <div style="font-family: 'Dancing Script', cursive; font-weight: 700; font-size: 4.2vw; line-height: 1; color: #22211D">Deeksha Gahlot</div>
+      <div style="margin-top: 1.4vw; font-size: 1.35vw; font-weight: 500; color: #33322D">Senior UX/ Product Designer @ Shiprocket</div>
+      <div style="margin-top: 4.5vw; font-size: 1.35vw; font-weight: 600; line-height: 1.6; color: #22211D">5 years of turning "this is confusing"<br>into "oh, that's easy."</div>
+    </div>
+
+    <div style="position: absolute; z-index: 30; left: 0; right: 0; top: 84vh; display: flex; flex-direction: column; align-items: center; gap: 0.9vw">
+      <div data-tip="1" style="padding: 0.6vw 1.1vw; border-radius: 10px; background: #23211D; color: #F4F0E6; font-size: 1vw; font-weight: 500; opacity: 0; transform: translateY(6px); transition: opacity .35s ease, transform .35s ease">Clean mode on</div>
+      <div data-hint="1" style="position: absolute; left: 50%; bottom: 1vw; display: flex; align-items: flex-end; gap: 0.2vw; transform: translateX(4.6vw); transition: opacity .4s ease; pointer-events: none">
+        <svg viewBox="0 0 64 44" fill="none" stroke="#B0A793" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" style="width: 3.4vw; min-width: 36px; height: auto">
+          <path d="M58 9C44 8 24 15 12 31"></path>
+          <path d="M12 31l8.9-1.2M12 31l6.2-6.8"></path>
+        </svg>
+        <span style="font-family: 'Caveat', cursive; font-weight: 500; font-size: clamp(13px, 1.15vw, 20px); line-height: 1.1; color: #8A8172; white-space: nowrap; padding-bottom: 0.4vw">try clean mode</span>
+      </div>
+      <div style="display: flex; gap: 0.7vw">
+        <button data-mode="collage" type="button" aria-label="Collage mode" style="width: 3.9vw; height: 3.9vw; min-width: 46px; min-height: 46px; border-radius: 14px; border: 2px solid transparent; background: #9D7A54; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 8px 20px rgba(120,104,72,0.18); transition: transform .2s ease" style-hover="transform: translateY(-2px)">
+          <svg data-icon="1" viewBox="0 0 256 256" fill="#FBF8F0" style="width: 2.4vw; min-width: 27px; height: 2.4vw; min-height: 27px;"><path d="M220.27,158.54a8,8,0,0,0-7.7-.46,20,20,0,1,1,0-36.16A8,8,0,0,0,224,114.69V72a16,16,0,0,0-16-16H171.78a35.36,35.36,0,0,0,.22-4,36.11,36.11,0,0,0-11.36-26.24,36,36,0,0,0-60.55,23.62,36.56,36.56,0,0,0,.14,6.62H64A16,16,0,0,0,48,72v32.22a35.36,35.36,0,0,0-4-.22,36.12,36.12,0,0,0-26.24,11.36,35.7,35.7,0,0,0-9.69,27,36.08,36.08,0,0,0,33.31,33.6,35.68,35.68,0,0,0,6.62-.14V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V165.31A8,8,0,0,0,220.27,158.54ZM208,208H64V165.31a8,8,0,0,0-11.43-7.23,20,20,0,1,1,0-36.16A8,8,0,0,0,64,114.69V72h46.69a8,8,0,0,0,7.23-11.43,20,20,0,1,1,36.16,0A8,8,0,0,0,161.31,72H208v32.23a35.68,35.68,0,0,0-6.62-.14A36,36,0,0,0,204,176a35.36,35.36,0,0,0,4-.22Z"></path></svg>
+        </button>
+        <button data-mode="clean" type="button" aria-label="Clean mode" style="width: 3.9vw; height: 3.9vw; min-width: 46px; min-height: 46px; border-radius: 14px; border: 2px solid transparent; background: #FBF8F0; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 8px 20px rgba(120,104,72,0.14); transition: transform .2s ease" style-hover="transform: translateY(-2px)">
+          <svg data-icon="1" viewBox="0 0 256 256" fill="#6E6858" style="width: 2.4vw; min-width: 27px; height: 2.4vw; min-height: 27px;"><path d="M235.5,216.81c-22.56-11-35.5-34.58-35.5-64.8V134.73a15.94,15.94,0,0,0-10.09-14.87L165,110a8,8,0,0,1-4.48-10.34l21.32-53a28,28,0,0,0-16.1-37,28.14,28.14,0,0,0-35.82,16,.61.61,0,0,0,0,.12L108.9,79a8,8,0,0,1-10.37,4.49L73.11,73.14A15.89,15.89,0,0,0,55.74,76.8C34.68,98.45,24,123.75,24,152a111.45,111.45,0,0,0,31.18,77.53A8,8,0,0,0,61,232H232a8,8,0,0,0,3.5-15.19ZM67.14,88l25.41,10.3a24,24,0,0,0,31.23-13.45l21-53c2.56-6.11,9.47-9.27,15.43-7a12,12,0,0,1,6.88,15.92L145.69,93.76a24,24,0,0,0,13.43,31.14L184,134.73V152c0,.33,0,.66,0,1L55.77,101.71A108.84,108.84,0,0,1,67.14,88Zm48,128a87.53,87.53,0,0,1-24.34-42,8,8,0,0,0-15.49,4,105.16,105.16,0,0,0,18.36,38H64.44A95.54,95.54,0,0,1,40,152a85.9,85.9,0,0,1,7.73-36.29l137.8,55.12c3,18,10.56,33.48,21.89,45.16Z"></path></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section id="work" data-screen-label="Case studies" style="position: relative; padding: 7vw 7vw 6vw; background: #F4F0E6">
+    <div data-reveal="1" style="font-family: 'EB Garamond', serif; font-size: 1.15vw; letter-spacing: 0.22em; text-transform: uppercase; color: #8A8172">Case studies</div>
+    <h2 data-reveal="1" style="margin: 1.6vw 0 4.5vw; font-size: 3vw; line-height: 1.24; font-weight: 800; letter-spacing: -0.015em; color: #22211D">Research. Design.<br>Launch. <span style="color: #B7B0A1">Repeat.</span></h2>
+
+    <div data-reveal="1" style="padding: 2.5vw; border-radius: 18px; background-color: #EFE9DA; background-image: url(/uploads/pasted-1788554421572-0.webp); background-size: 460px auto; background-repeat: repeat; box-shadow: inset 0 0 40px rgba(60,52,40,0.10)">
+    <div class="cs-grid">
+      <article data-reveal="1" data-card="1" style="display: flex; position: relative; cursor: pointer; flex-direction: column; background: #FBF8F0; border-radius: 16px; padding: 1.6vw; box-shadow: 0 10px 26px rgba(120,104,72,0.12); transition: transform .45s cubic-bezier(.2,.8,.2,1), opacity .7s ease">
+        <div data-zoom="1" style="filter: saturate(0.78) brightness(1.02); opacity: 0.9; width: 100%; padding-bottom: 60%; border-radius: 10px; border: 1px solid #E7DFCB; background-color: #EDE4D5; background-image: url(/uploads/pasted-1789403769625-0.png); background-size: cover; background-position: top center; position: relative; overflow: hidden; transition: transform .5s ease"></div>
+        <h3 style="margin: 1.2vw 0 0.6vw; font-size: clamp(18px, 1.5vw, 29px); line-height: 1.3; font-weight: 700; color: #22211D">Shiprocket Agentic, an AI-first seller platform</h3>
+        <p style="margin: 0 0 1.1vw; font-size: clamp(13px, 1.1vw, 20px); line-height: 1.55; color: #6B6659; text-wrap: pretty">A conversational, AI-first experience for sellers. Demoed live at SHIVIR, now piloting with real sellers.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.6vw; margin-bottom: 1.1vw">
+          <span style="padding: 0.5vw 0.9vw; border-radius: 8px; background: #E7EAF1; font-size: clamp(11px, 0.9vw, 16px); font-weight: 600; letter-spacing: 0.08em; color: #5C6579">GEN AI</span>
+          <span style="padding: 0.5vw 0.9vw; border-radius: 8px; background: #E7EAF1; font-size: clamp(11px, 0.9vw, 16px); font-weight: 600; letter-spacing: 0.08em; color: #5C6579">CONVERSATIONAL UX</span>
+        </div>
+        <a href="/work/shiprocket-agentic/" style="margin-top: auto; font-size: clamp(13px, 1.05vw, 19px); font-weight: 600; color: #8A6A44">Check out case study →</a>
+        <a href="/work/shiprocket-agentic/" aria-label="Shiprocket Agentic, an AI-first seller platform" style="position: absolute; inset: 0; border-radius: 16px; z-index: 2"></a>
+      </article>
+
+      <article data-reveal="1" data-card="1" style="display: flex; position: relative; cursor: pointer; flex-direction: column; background: #FBF8F0; border-radius: 16px; padding: 1.6vw; box-shadow: 0 10px 26px rgba(120,104,72,0.12); transition: transform .45s cubic-bezier(.2,.8,.2,1), opacity .7s ease">
+        <div data-zoom="1" style="filter: saturate(0.78) brightness(1.02); opacity: 0.9; width: 100%; padding-bottom: 60%; border-radius: 10px; border: 1px solid #E7DFCB; position: relative; overflow: hidden; transition: transform .5s ease">
+          <img src="/uploads/pasted-1789403776982-0.png" alt="Unified Add Order Experience" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top center" />
+        </div>
+        <h3 style="margin: 1.2vw 0 0.6vw; font-size: clamp(18px, 1.5vw, 29px); line-height: 1.3; font-weight: 700; color: #22211D">Unified Add Order Experience</h3>
+        <p style="margin: 0 0 1.1vw; font-size: clamp(13px, 1.1vw, 20px); line-height: 1.55; color: #6B6659; text-wrap: pretty">One flexible flow instead of many. Order creation down 80% (9→1 min), first-month adoption at 75%, 4.2/5 CSAT.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.6vw; margin-bottom: 1.1vw">
+          <span style="padding: 0.5vw 0.9vw; border-radius: 8px; background: #E7EAF1; font-size: clamp(11px, 0.9vw, 16px); font-weight: 600; letter-spacing: 0.08em; color: #5C6579">WORKFLOW DESIGN</span>
+          <span style="padding: 0.5vw 0.9vw; border-radius: 8px; background: #E7EAF1; font-size: clamp(11px, 0.9vw, 16px); font-weight: 600; letter-spacing: 0.08em; color: #5C6579">ADOPTION</span>
+        </div>
+        <a href="https://www.figma.com/proto/UX0IpNHgzqQDN0Ii4bQAtj/Deeksha-Portfolio?node-id=512-899&viewport=411%2C40%2C0.05&t=GfZBMZWbUnm6v8J0-1&scaling=min-zoom&content-scaling=fixed&page-id=512%3A896" target="_blank" rel="noopener" style="margin-top: auto; font-size: clamp(13px, 1.05vw, 19px); font-weight: 600; color: #8A6A44">Check out case study →</a>
+        <a href="https://www.figma.com/proto/UX0IpNHgzqQDN0Ii4bQAtj/Deeksha-Portfolio?node-id=512-899&viewport=411%2C40%2C0.05&t=GfZBMZWbUnm6v8J0-1&scaling=min-zoom&content-scaling=fixed&page-id=512%3A896" target="_blank" rel="noopener" aria-label="Unified Add Order Experience" style="position: absolute; inset: 0; border-radius: 16px; z-index: 2"></a>
+      </article>
+
+      <article data-reveal="1" data-card="1" style="display: flex; position: relative; cursor: pointer; flex-direction: column; background: #FBF8F0; border-radius: 16px; padding: 1.6vw; box-shadow: 0 10px 26px rgba(120,104,72,0.12); transition: transform .45s cubic-bezier(.2,.8,.2,1), opacity .7s ease">
+        <div data-zoom="1" style="filter: saturate(0.78) brightness(1.02); opacity: 0.9; width: 100%; padding-bottom: 60%; border-radius: 10px; border: 1px solid #E7DFCB; background: repeating-linear-gradient(45deg, #D7E5EE 0 9px, #E2ECF3 9px 18px); position: relative; transition: transform .5s ease">
+          <img src="/uploads/pasted-1789403766172-0.png" alt="Quick &amp; Rider app screens" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top center" />
+        </div>
+        <h3 style="margin: 1.2vw 0 0.6vw; font-size: clamp(18px, 1.5vw, 29px); line-height: 1.3; font-weight: 700; color: #22211D">Quick &amp; Rider, two live apps</h3>
+        <p style="margin: 0 0 1.1vw; font-size: clamp(13px, 1.1vw, 20px); line-height: 1.55; color: #6B6659; text-wrap: pretty">Both sides of the same delivery. Booking end to end on Quick, and a rider onboarding revamp that started as an engagement brief and turned out to be a supply problem.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.6vw; margin-bottom: 1.1vw">
+          <span style="padding: 0.5vw 0.9vw; border-radius: 8px; background: #E7EAF1; font-size: clamp(11px, 0.9vw, 16px); font-weight: 600; letter-spacing: 0.08em; color: #5C6579">APP CASE STUDY</span>
+          <span style="padding: 0.5vw 0.9vw; border-radius: 8px; background: #E7EAF1; font-size: clamp(11px, 0.9vw, 16px); font-weight: 600; letter-spacing: 0.08em; color: #5C6579">COMPETITIVE RESEARCH</span>
+        </div>
+        <a href="/work/quick-and-rider/" style="margin-top: auto; font-size: clamp(13px, 1.05vw, 19px); font-weight: 600; color: #8A6A44">Check out case study →</a>
+        <a href="/work/quick-and-rider/" aria-label="Quick and Rider, two live apps" style="position: absolute; inset: 0; border-radius: 16px; z-index: 2"></a>
+      </article>
+
+      <article data-reveal="1" data-card="1" style="display: flex; position: relative; cursor: pointer; flex-direction: column; background: #FBF8F0; border-radius: 16px; padding: 1.6vw; box-shadow: 0 10px 26px rgba(120,104,72,0.12); transition: transform .45s cubic-bezier(.2,.8,.2,1), opacity .7s ease">
+        <div data-zoom="1" style="filter: saturate(0.78) brightness(1.02); opacity: 0.9; width: 100%; padding-bottom: 60%; border-radius: 10px; border: 1px solid #E7DFCB; background: #EDE9DC; position: relative; overflow: hidden; transition: transform .5s ease">
+          <img src="/uploads/pasted-1789403773476-0.png" alt="Apna Store grocery app" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top center" />
+        </div>
+        <h3 style="margin: 1.2vw 0 0.6vw; font-size: clamp(18px, 1.5vw, 29px); line-height: 1.3; font-weight: 700; color: #22211D">Apna Store, a visual design showcase</h3>
+        <p style="margin: 0 0 1.1vw; font-size: clamp(13px, 1.1vw, 20px); line-height: 1.55; color: #6B6659; text-wrap: pretty">Category landing pages, festive and theme campaigns, homepage banners and order tracking for a curation-led grocery app.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.6vw; margin-bottom: 1.1vw">
+          <span style="padding: 0.5vw 0.9vw; border-radius: 8px; background: #E7EAF1; font-size: clamp(11px, 0.9vw, 16px); font-weight: 600; letter-spacing: 0.08em; color: #5C6579">VISUAL DESIGN</span>
+          <span style="padding: 0.5vw 0.9vw; border-radius: 8px; background: #E7EAF1; font-size: clamp(11px, 0.9vw, 16px); font-weight: 600; letter-spacing: 0.08em; color: #5C6579">CAMPAIGNS</span>
+        </div>
+        <a href="/work/apna-store/" style="margin-top: auto; font-size: clamp(13px, 1.05vw, 19px); font-weight: 600; color: #8A6A44">Check out case study →</a>
+        <a href="/work/apna-store/" aria-label="Apna Store, a visual design showcase" style="position: absolute; inset: 0; border-radius: 16px; z-index: 2"></a>
+      </article>
+
+    </div>
+
+    <a data-reveal="1" data-strip="1" href="/uploads/Dee-UX-Masterclass.pdf" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 1.4vw; margin-top: 5vw; padding: 1.1vw 1.6vw; border-radius: 12px; background: #FBF8F0; border: 1px solid #E7DFCB; text-decoration: none; box-shadow: 0 10px 26px rgba(120,104,72,0.12); cursor: pointer; transition: transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s ease, opacity .7s ease">
+      <span style="flex: none; padding: 0.5vw 0.9vw; border-radius: 8px; background: linear-gradient(135deg, #F5D77A, #E2AE3C); font-family: 'JetBrains Mono', monospace; font-size: clamp(11px, 0.9vw, 16px); font-weight: 700; letter-spacing: 0.08em; color: #4A3610">TALK</span>
+      <span style="flex: 1 1 auto; min-width: 0; font-size: clamp(14px, 1.15vw, 21px); line-height: 1.4; font-weight: 600; color: #22211D; text-wrap: pretty">UX Masterclass, presented at the Product Learning Event</span>
+      <span style="flex: none; font-size: clamp(13px, 1.05vw, 19px); font-weight: 600; color: #8A6A44">View deck →</span>
+    </a>
+  </section>
+
+  <section id="journal" data-screen-label="Journal transition" style="position: relative; padding: 8vw 6vw; background-color: #EFEADC; background-image: linear-gradient(rgba(244,239,226,0.90), rgba(244,239,226,0.90)), url(/uploads/pasted-1788554754502-0.webp); background-size: auto, 640px auto; background-repeat: repeat, repeat; -webkit-mask-image: radial-gradient(14px 14px at 14px 14px, transparent 0 13px, #000 14px), radial-gradient(14px 14px at 14px 14px, transparent 0 13px, #000 14px), linear-gradient(#000, #000); -webkit-mask-size: 28px 28px, 28px 28px, 100% calc(100% - 40px); -webkit-mask-position: top left, bottom left, center; -webkit-mask-repeat: repeat-x, repeat-x, no-repeat; mask-image: radial-gradient(14px 14px at 14px 14px, transparent 0 13px, #000 14px), radial-gradient(14px 14px at 14px 14px, transparent 0 13px, #000 14px), linear-gradient(#000, #000); mask-size: 28px 28px, 28px 28px, 100% calc(100% - 40px); mask-position: top left, bottom left, center; mask-repeat: repeat-x, repeat-x, no-repeat">
+    <div style="position: absolute; right: 7%; top: 38%; display: flex; align-items: center; gap: 10px; color: #8A8172; pointer-events: none">
+      <svg viewBox="0 0 60 30" fill="none" stroke="#B0A793" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" style="width: 52px; height: auto">
+        <path d="M56 6C42 4 22 10 10 24"></path>
+        <path d="M10 24l1.5-8.4M10 24l8.2 1.9"></path>
+      </svg>
+      <span style="font-family: 'Caveat', cursive; font-weight: 500; font-size: clamp(15px, 1.3vw, 22px); white-space: nowrap">click the diary to open it</span>
+    </div>
+    <div data-journal-open="1" data-reveal="1" style="max-width: 520px; margin: 0 auto; transition: transform .8s cubic-bezier(.2,.8,.2,1), opacity .8s ease">
+      <div style="width: 100%; padding-bottom: 122%; cursor: pointer; border-radius: 6px 18px 18px 6px; position: relative; transform: rotate(-2.2deg); background-color: #2C5C46; background-image: radial-gradient(rgba(255,255,255,0.035) 1px, transparent 1px), radial-gradient(rgba(0,0,0,0.05) 1px, transparent 1px), linear-gradient(100deg, #1C4534 0 3%, #2E6048 5%, #2A5843 55%, #23503C 100%); background-size: 5px 5px, 7px 7px, 100% 100%; background-position: 0 0, 3px 4px, 0 0; box-shadow: 0 3px 6px rgba(60,52,40,0.20), 0 16px 30px rgba(60,52,40,0.24), 0 44px 80px rgba(60,52,40,0.30), inset 0 1px 0 rgba(255,255,255,0.10), inset -14px 0 26px -14px rgba(0,0,0,0.35)">
+        <div style="position: absolute; left: 0; top: 0; bottom: 0; width: 7%; border-radius: 6px 0 0 6px; background: linear-gradient(to right, rgba(0,0,0,0.30), rgba(0,0,0,0) 70%)"></div>
+        <div style="position: absolute; left: 7.5%; top: 2.5%; bottom: 2.5%; width: 1px; background: repeating-linear-gradient(to bottom, rgba(240,227,184,0.35) 0 5px, transparent 5px 11px)"></div>
+        <div style="position: absolute; right: -1.4%; top: 1.5%; bottom: 1.5%; width: 3%; border-radius: 0 4px 4px 0; background: repeating-linear-gradient(to bottom, #F6F1E2 0 2px, #E4DCC6 2px 4px); box-shadow: 2px 0 6px rgba(60,52,40,0.20)"></div>
+        <div style="position: absolute; inset: 3.5%; border-radius: 4px 14px 14px 4px; border: 1px solid rgba(240,227,184,0.16); pointer-events: none"></div>
+
+        <div style="position: absolute; left: 0; right: 0; top: 11%; text-align: center; font-family: 'Dancing Script', cursive; font-weight: 700; font-size: 3.4vw; color: #F0E3B8; text-shadow: 0 1px 1px rgba(0,0,0,0.35)">Journal</div>
+        <div style="position: absolute; left: 0; right: 0; top: 24%; text-align: center; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.5vw; font-weight: 500; letter-spacing: 0.36em; color: rgba(228,238,229,0.30); text-shadow: 0 1px 0 rgba(255,255,255,0.10), 0 -1px 1px rgba(0,0,0,0.35)">DEEKSHA</div>
+
+        <img src="/uploads/pasted-1788554026901-0.webp" alt="Pressed flowers collage" style="position: absolute; left: 50%; top: 29%; width: 52%; transform: translateX(-50%) rotate(-1.5deg); filter: drop-shadow(0 12px 24px rgba(20,40,30,0.35))" />
+
+        <div style="position: absolute; left: 0; right: 0; bottom: 8%; text-align: center; font-family: 'Plus Jakarta Sans', sans-serif; font-size: clamp(10px, 0.9vw, 16px); font-weight: 500; letter-spacing: 0.5em; color: rgba(230,220,180,0.55)">2026</div>
+        <div style="position: absolute; left: 47%; bottom: -3.2%; width: 5.5%; height: 8%; border-radius: 0 0 3px 3px; background: linear-gradient(#9CC7A2, #7FB287); box-shadow: 0 4px 8px rgba(20,40,30,0.25)"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="playground" data-screen-label="Gen AI experiments" style="position: relative; padding: 7vw 7vw 4vw; background: #F4F0E6">
+    <h2 data-reveal="1" style="margin: 0; font-size: clamp(28px, 2.7vw, 52px); font-weight: 800; letter-spacing: -0.015em; color: #22211D">Gen AI experiments</h2>
+    <p data-reveal="1" style="margin: 0.8vw 0 3vw; font-family: 'EB Garamond', serif; font-style: italic; font-size: clamp(18px, 1.6vw, 30px); color: #4A4740">Late-night explorations with AI</p>
+    <div data-reveal="1" style="padding: 2.5vw; border-radius: 18px; background-color: #EFE9DA; background-image: url(/uploads/pasted-1788554421572-0.webp); background-size: 460px auto; background-repeat: repeat; box-shadow: inset 0 0 40px rgba(60,52,40,0.10)">
+      <div class="om-scroll" style="display: flex; gap: 2vw; overflow-x: auto; padding-bottom: 0.8vw; scroll-snap-type: x mandatory">
+        <div data-card="1" style="flex: 0 0 42%; min-width: 320px; scroll-snap-align: start">
+          <a href="/playground/design-system-context/" style="display: flex; flex-direction: column; height: 100%; background: #FBF8F0; border-radius: 16px; padding: 1.6vw; box-shadow: 0 10px 26px rgba(120,104,72,0.12); color: inherit; text-decoration: none; cursor: pointer; transition: transform .4s cubic-bezier(.2,.8,.2,1)">
+            <div data-zoom="1" style="width: 100%; padding-bottom: 58%; border-radius: 8px; border: 1px solid #E7DFCB; position: relative; overflow: hidden; transition: transform .5s ease">
+              <img src="/uploads/pasted-1788639840386-0.png" alt="Design system token document" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover" />
+            </div>
+            <h4 style="margin: 1.1vw 0 0.5vw; font-size: clamp(17px, 1.35vw, 26px); font-weight: 700; color: #22211D">Design system context</h4>
+            <p style="margin: 0 0 0.9vw; font-size: clamp(13px, 1.05vw, 20px); line-height: 1.5; color: #6B6659">Same brief handed over four ways: screenshots, PDF, Figma MCP, and a written token doc. The doc beat the live connection.</p>
+            <span style="font-size: clamp(13px, 1.05vw, 20px); font-weight: 600; color: #8A6A44">Read more →</span>
+          </a>
+        </div>
+        <div data-card="1" style="flex: 0 0 42%; min-width: 320px; scroll-snap-align: start">
+          <a href="/playground/adversarial-reviewer/" style="display: flex; flex-direction: column; height: 100%; background: #FBF8F0; border-radius: 16px; padding: 1.6vw; box-shadow: 0 10px 26px rgba(120,104,72,0.12); color: inherit; text-decoration: none; cursor: pointer; transition: transform .4s cubic-bezier(.2,.8,.2,1)">
+            <div data-zoom="1" style="width: 100%; padding-bottom: 58%; border-radius: 8px; border: 1px solid #E7DFCB; position: relative; overflow: hidden; transition: transform .5s ease">
+              <img src="/uploads/pasted-1788616891293-0.webp" alt="Content guidelines skill file" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover" />
+            </div>
+            <h4 style="margin: 1.1vw 0 0.5vw; font-size: clamp(17px, 1.35vw, 26px); font-weight: 700; color: #22211D">The adversarial reviewer</h4>
+            <p style="margin: 0 0 0.9vw; font-size: clamp(13px, 1.05vw, 20px); line-height: 1.5; color: #6B6659">Asked a model to attack a flow I had already signed off. It surfaced 11 gaps; 4 were worth fixing.</p>
+            <span style="font-size: clamp(13px, 1.05vw, 20px); font-weight: 600; color: #8A6A44">Read more →</span>
+          </a>
+        </div>
+        <div data-card="1" style="flex: 0 0 42%; min-width: 320px; scroll-snap-align: start">
+          <a href="/playground/writing-rules/" style="display: flex; flex-direction: column; height: 100%; background: #FBF8F0; border-radius: 16px; padding: 1.6vw; box-shadow: 0 10px 26px rgba(120,104,72,0.12); color: inherit; text-decoration: none; cursor: pointer; transition: transform .4s cubic-bezier(.2,.8,.2,1)">
+            <div data-zoom="1" style="width: 100%; padding-bottom: 58%; border-radius: 8px; border: 1px solid #E7DFCB; position: relative; overflow: hidden; transition: transform .5s ease">
+              <img src="/uploads/pasted-1788617020550-0.webp" alt="Gap review skill file" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover" />
+            </div>
+            <h4 style="margin: 1.1vw 0 0.5vw; font-size: clamp(17px, 1.35vw, 26px); font-weight: 700; color: #22211D">Content guidelines as a skill</h4>
+            <p style="margin: 0 0 0.9vw; font-size: clamp(13px, 1.05vw, 20px); line-height: 1.5; color: #6B6659">Turned my content guidelines into a reusable skill, then tested rules-loaded against no-rules.</p>
+            <span style="font-size: clamp(13px, 1.05vw, 20px); font-weight: 600; color: #8A6A44">Read more →</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div style="position: relative; height: 7vw; overflow: hidden">
+    <div data-tape="1" style="position: absolute; left: -8%; top: 2vw; width: 116%; transform: rotate(3deg); background: #EBDFC4; border-top: 1px solid #DFCFAB; border-bottom: 1px solid #DFCFAB; padding: 0.7vw 0; overflow: hidden">
+      <div style="display: flex; width: max-content; animation: tape 28s linear infinite; font-family: 'EB Garamond', serif; font-size: 1.15vw; letter-spacing: 0.06em; color: #6E5B3A; white-space: nowrap">
+        <span style="padding-right: 2vw">Rapid Prototyping • User research • User flows • Design systems • Rapid Prototyping • User research • User flows • Design systems •&nbsp;</span>
+        <span style="padding-right: 2vw">Rapid Prototyping • User research • User flows • Design systems • Rapid Prototyping • User research • User flows • Design systems •&nbsp;</span>
+      </div>
+    </div>
+  </div>
+
+  <section id="about" data-screen-label="A record of curiosity" style="position: relative; padding: 5vw 7vw 6vw; background: #F4F0E6">
+    <h2 data-reveal="1" style="margin: 0; font-size: clamp(28px, 2.7vw, 52px); font-weight: 800; letter-spacing: -0.015em; color: #22211D">A record of curiosity</h2>
+    <p data-reveal="1" style="margin: 0.8vw 0 3.5vw; max-width: 34ch; font-family: 'EB Garamond', serif; font-style: italic; font-size: 1.5vw; line-height: 1.35; color: #4A4740">The things I learn, question, &amp; occasionally write about.</p>
+    <div class="om-scroll" style="display: flex; gap: 2.2vw; overflow-x: auto; padding: 0.5vw 0 1.5vw; text-align: left; scroll-snap-type: x mandatory">
+      <article data-card="1" data-reveal="1" style="flex: 0 0 31%; min-width: 260px; scroll-snap-align: start">
+        <a href="https://deeetalks.substack.com/p/making-got-easy-choosing-didnt" target="_blank" rel="noopener" style="display: flex; flex-direction: column; height: 100%; background: #FBF8F0; border-radius: 14px; overflow: hidden; box-shadow: 0 10px 28px rgba(120,104,72,0.10); color: inherit; text-decoration: none; cursor: pointer; transition: transform .4s cubic-bezier(.2,.8,.2,1), opacity .7s ease">
+          <div data-zoom="1" style="width: 100%; padding-bottom: 62%; position: relative; overflow: hidden; transition: transform .55s ease">
+            <img src="/uploads/pasted-1788618418394-0.webp" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover" />
+          </div>
+          <div style="padding: 1.3vw">
+            <h4 style="margin: 0 0 0.8vw; font-size: clamp(16px, 1.35vw, 25px); font-weight: 700; line-height: 1.4; color: #22211D">Making Got Easy. Choosing Didn't.</h4>
+          </div>
+        </a>
+      </article>
+      <article data-card="1" data-reveal="1" style="flex: 0 0 31%; min-width: 260px; scroll-snap-align: start">
+        <a href="https://deeetalks.substack.com/p/a-random-wednesday-247-pm" target="_blank" rel="noopener" style="display: flex; flex-direction: column; height: 100%; background: #FBF8F0; border-radius: 14px; overflow: hidden; box-shadow: 0 10px 28px rgba(120,104,72,0.10); color: inherit; text-decoration: none; cursor: pointer; transition: transform .4s cubic-bezier(.2,.8,.2,1), opacity .7s ease">
+          <div data-zoom="1" style="width: 100%; padding-bottom: 62%; position: relative; overflow: hidden; transition: transform .55s ease">
+            <img src="/uploads/pasted-1788618537407-0.webp" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover" />
+          </div>
+          <div style="padding: 1.3vw">
+            <h4 style="margin: 0 0 0.8vw; font-size: clamp(16px, 1.35vw, 25px); font-weight: 700; line-height: 1.4; color: #22211D">A Random Wednesday, 2:47 PM</h4>
+          </div>
+        </a>
+      </article>
+      <article data-card="1" data-reveal="1" style="flex: 0 0 31%; min-width: 260px; scroll-snap-align: start">
+        <a href="https://deeetalks.substack.com/p/your-product-has-a-new-user-and-its" target="_blank" rel="noopener" style="display: flex; flex-direction: column; height: 100%; background: #FBF8F0; border-radius: 14px; overflow: hidden; box-shadow: 0 10px 28px rgba(120,104,72,0.10); color: inherit; text-decoration: none; cursor: pointer; transition: transform .4s cubic-bezier(.2,.8,.2,1), opacity .7s ease">
+          <div data-zoom="1" style="width: 100%; padding-bottom: 62%; position: relative; overflow: hidden; transition: transform .55s ease">
+            <img src="/uploads/pasted-1788618328617-0.webp" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover" />
+          </div>
+          <div style="padding: 1.3vw">
+            <h4 style="margin: 0 0 0.8vw; font-size: clamp(16px, 1.35vw, 25px); font-weight: 700; line-height: 1.4; color: #22211D">Your Product Has a New User, and It's Not Human</h4>
+          </div>
+        </a>
+      </article>
+    </div>
+  </section>
+
+
+  <section data-screen-label="Recommendations" style="position: relative; padding: 5vw 0 7vw; background-color: #EFEADC; background-image: linear-gradient(rgba(244,240,230,0.45), rgba(244,240,230,0.45)), url(/uploads/pasted-1788619445977-0.webp); background-size: auto, cover; background-position: center, center; background-repeat: repeat, no-repeat; overflow: hidden">
+    <div data-reveal="1" style="position: relative; text-align: center; margin-bottom: 3.5vw">
+      <h2 style="margin: 0; font-size: 1.15vw; font-weight: 700; letter-spacing: 0.28em; text-transform: uppercase; color: #8A8172">what they say behind my back</h2>
+    </div>
+    <div class="om-scroll" style="display: flex; gap: 2vw; overflow-x: auto; padding: 0.5vw 8vw 1.5vw; scroll-snap-type: x mandatory">
+        <div data-card="1" style="flex: 0 0 30%; min-width: 300px; scroll-snap-align: center; display: flex; flex-direction: column; background: #F7F1E4; border: 1px solid #E4D9C2; border-radius: 16px; padding: 2vw; box-shadow: 0 10px 28px rgba(120,104,72,0.08); transition: transform .4s cubic-bezier(.2,.8,.2,1)">
+          <p style="margin: 0 0 2vw; font-size: 1.05vw; line-height: 1.65; color: #33322D; text-wrap: pretty">Deeksha is a designer who truly listens to users, to data, and to context. Her ability to break down complex workflows and rebuild them with clarity helped us move faster and make better decisions. She's a valuable partner to any product team.</p>
+          <div style="display: flex; align-items: center; gap: 0.9vw; margin-top: auto">
+            <img src="/uploads/pasted-1788617076806-0.webp" alt="Harshith Vuppla" style="width: 2.4vw; height: 2.4vw; min-width: 34px; min-height: 34px; border-radius: 999px; object-fit: cover; flex: none" />
+            <div style="font-size: clamp(12px, 1vw, 17px); color: #7A7466">Harshith Vuppla, CEO@ hellodukaan</div>
+          </div>
+        </div>
+        <div data-card="1" style="flex: 0 0 30%; min-width: 300px; scroll-snap-align: center; display: flex; flex-direction: column; background: #F7F1E4; border: 1px solid #E4D9C2; border-radius: 16px; padding: 2vw; box-shadow: 0 10px 28px rgba(120,104,72,0.08); transition: transform .4s cubic-bezier(.2,.8,.2,1)">
+          <p style="margin: 0 0 2vw; font-size: 1.05vw; line-height: 1.65; color: #33322D; text-wrap: pretty">Deeksha's eagerness to learn goes hand-in-hand with her ability to approach challenges as a creative problem-solver. Our collaboration was both fun and productive.</p>
+          <div style="display: flex; align-items: center; gap: 0.9vw; margin-top: auto">
+            <img src="/uploads/pasted-1788617087514-0.webp" alt="Anjali Kalsi" style="width: 2.4vw; height: 2.4vw; min-width: 34px; min-height: 34px; border-radius: 999px; object-fit: cover; flex: none" />
+            <div style="font-size: clamp(12px, 1vw, 17px); color: #7A7466">Anjali Kalsi, Founder @MVP Studio</div>
+          </div>
+        </div>
+        <div data-card="1" style="flex: 0 0 30%; min-width: 300px; scroll-snap-align: center; display: flex; flex-direction: column; background: #F7F1E4; border: 1px solid #E4D9C2; border-radius: 16px; padding: 2vw; box-shadow: 0 10px 28px rgba(120,104,72,0.08); transition: transform .4s cubic-bezier(.2,.8,.2,1)">
+          <p style="margin: 0 0 2vw; font-size: 1.05vw; line-height: 1.65; color: #33322D; text-wrap: pretty">Deeksha is incredibly dependable, fast when needed, thoughtful when it matters, and always empathetic to users. She elevated the quality of discussions and brought clarity to complex workflows through her structured approach.</p>
+          <div style="display: flex; align-items: center; gap: 0.9vw; margin-top: auto">
+            <img src="/uploads/pasted-1788617097044-0.webp" alt="Nishanth" style="width: 2.4vw; height: 2.4vw; min-width: 34px; min-height: 34px; border-radius: 999px; object-fit: cover; flex: none" />
+            <div style="font-size: clamp(12px, 1vw, 17px); color: #7A7466">Nishanth, Design Lead @Abu Dhabi Commercial Bank</div>
+          </div>
+        </div>
+    </div>
+  </section>
+
+  <div data-journal-modal="1" style="position: fixed; inset: 0; z-index: 200; display: flex; align-items: center; justify-content: center; padding: 3vw; background-color: #EFEADC; background-image: linear-gradient(rgba(244,239,226,0.90), rgba(244,239,226,0.90)), url(/uploads/pasted-1788554754502-0.webp); background-size: auto, 640px auto; background-repeat: repeat, repeat; box-shadow: inset 0 0 160px rgba(60,52,40,0.18); opacity: 0; pointer-events: none; transition: opacity .35s ease; perspective: 2200px; perspective-origin: 50% 50%">
+    <div data-journal-sheet="1" style="position: relative; width: 100%; max-width: 1180px; max-height: 90vh; aspect-ratio: 1.5 / 1; display: flex; border-radius: 14px; background: #FDFCF7; background-image: radial-gradient(#D9D6CC 1px, transparent 1px); background-size: 22px 22px; box-shadow: 0 40px 90px rgba(30,26,20,0.35); transform: scale(0.94) translateY(10px) rotate(-2.2deg); transition: transform .4s cubic-bezier(.2,.8,.2,1); transform-style: preserve-3d; perspective: 2400px; overflow: hidden">
+      <div style="position: absolute; left: 50%; top: 0; bottom: 0; width: 26px; transform: translateX(-50%); background: linear-gradient(to right, rgba(120,104,72,0) 0%, rgba(120,104,72,0.16) 45%, rgba(120,104,72,0.16) 55%, rgba(120,104,72,0) 100%)"></div>
+      <div data-turn-hint="1" style="position: absolute; right: 62px; top: 22px; z-index: 6; font-family: 'Caveat', cursive; font-size: clamp(13px, 1.1vw, 19px); color: #A79E8C; pointer-events: none">turn the page</div>
+      <button data-journal-next="1" type="button" aria-label="Turn the page" style="position: absolute; right: 14px; top: 14px; z-index: 6; width: 40px; height: 40px; border-radius: 999px; border: 1px solid #E7DFCB; background: #FBF8F0; color: #4A4740; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 6px 16px rgba(120,104,72,0.16); transition: opacity .3s ease">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" style="width: 18px; height: 18px"><path d="M5 12h13M13 6.5l6 5.5-6 5.5"></path></svg>
+      </button>
+      <button data-journal-back="1" type="button" aria-label="Previous page" style="position: absolute; right: 62px; top: 14px; z-index: 6; width: 40px; height: 40px; border-radius: 999px; border: 1px solid #E7DFCB; background: #FBF8F0; color: #4A4740; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 6px 16px rgba(120,104,72,0.16); opacity: 0; pointer-events: none; transition: opacity .3s ease">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" style="width: 18px; height: 18px"><path d="M19 12H6M11 6.5l-5.5 5.5 5.5 5.5"></path></svg>
+      </button>
+      <button data-journal-close="1" type="button" aria-label="Close journal" style="position: absolute; right: 14px; top: 14px; z-index: 6; width: 40px; height: 40px; border-radius: 999px; border: 1px solid #E7DFCB; background: #FBF8F0; color: #4A4740; font-size: 18px; cursor: pointer; opacity: 0; pointer-events: none; transition: opacity .3s ease">×</button>
+      <div data-leaf="1" style="position: absolute; left: 50%; right: 0; top: 0; bottom: 0; z-index: 5; border-radius: 0 14px 14px 0; background: #FDFCF7; background-image: radial-gradient(#D9D6CC 1px, transparent 1px); background-size: 22px 22px; transform-origin: left center; transform: rotateY(0deg); transform-style: preserve-3d; backface-visibility: hidden; box-shadow: -12px 0 28px rgba(30,26,20,0.12); transition: transform .85s cubic-bezier(.3,.85,.3,1), opacity .35s ease; pointer-events: none; opacity: 0"></div>
+      <div data-spread="2" style="position: absolute; inset: 0; z-index: 4; padding: 4% 5%; border-radius: 14px; background: #FDFCF7; background-image: radial-gradient(#D9D6CC 1px, transparent 1px); background-size: 22px 22px; opacity: 0; transition: opacity .35s ease .25s; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2%">
+        <div style="position: absolute; left: 50%; top: 0; bottom: 0; width: 26px; transform: translateX(-50%); background: linear-gradient(to right, rgba(120,104,72,0) 0%, rgba(120,104,72,0.14) 45%, rgba(120,104,72,0.14) 55%, rgba(120,104,72,0) 100%); pointer-events: none"></div>
+        <img src="/uploads/pasted-1788555107392-0.webp" alt="Travel photo collage" style="display: block; width: 86%; height: auto; max-height: 76%; object-fit: contain; transform: rotate(-1deg); filter: drop-shadow(0 16px 32px rgba(30,26,20,0.20))" />
+        <div style="font-family: 'Caveat', cursive; font-weight: 500; font-size: clamp(20px, 2.3vw, 40px); color: #4A4740; text-align: center">where my mind wanders after work</div>
+        <div style="font-family: 'Caveat', cursive; font-weight: 500; font-size: clamp(14px, 1.5vw, 25px); line-height: 1.35; color: #7A756A; text-align: center; max-width: 62%">mountains, long drives, and the occasional detour for good food. I come back with a full camera roll and better ideas than the ones I left with.</div>
+      </div>
+      <div data-page="left" style="position: relative; flex: 1; padding: 5% 5.5%; overflow: hidden; transform-origin: right center; transform: rotateY(-105deg); backface-visibility: hidden; background: #FDFCF7; background-image: radial-gradient(#D9D6CC 1px, transparent 1px); background-size: 22px 22px; box-shadow: 8px 0 24px rgba(30,26,20,0); transition: transform .7s cubic-bezier(.25,.9,.25,1) .12s, box-shadow .7s ease .12s">
+        <div style="font-family: 'Dancing Script', cursive; font-weight: 700; font-size: clamp(28px, 3.1vw, 50px); line-height: 1; color: #22211D">Deeksha Gahlot</div>
+        <div style="display: flex; align-items: center; gap: 14px; margin-top: 4.5%">
+          <span style="padding: 7px 15px; border-radius: 7px; background: #DCEAFB; font-size: clamp(12px, 1.05vw, 18px); font-weight: 600; color: #24405F">Senior Product Designer</span>
+          <span style="padding: 9px 22px; border-radius: 50%; border: 2px solid #79ADE4; font-family: 'Caveat', cursive; font-size: clamp(13px, 1.2vw, 21px); color: #2A5885; transform: rotate(-2deg)">5 years</span>
+        </div>
+        <div style="display: grid; grid-template-columns: max-content max-content; align-items: baseline; gap: 3.6% 2.4vw; margin-top: 7%; font-family: 'Space Grotesk', sans-serif; font-size: clamp(14px, 1.45vw, 24px)">
+          <div style="display: flex; align-items: center; gap: 14px; color: #33322D"><span style="width: 9px; height: 9px; border-radius: 999px; background: #79ADE4; flex: none"></span>Shiprocket</div>
+          <div style="font-family: 'EB Garamond', serif; font-size: clamp(14px, 1.5vw, 25px); color: #55524A; white-space: nowrap">2024 - Present</div>
+          <div style="display: flex; align-items: center; gap: 14px; color: #33322D"><span style="width: 9px; height: 9px; border-radius: 999px; background: #79ADE4; flex: none"></span>Pidge</div>
+          <div style="font-family: 'EB Garamond', serif; font-size: clamp(14px, 1.5vw, 25px); color: #55524A; white-space: nowrap">2023 - 2024</div>
+          <div style="display: flex; align-items: center; gap: 14px; color: #33322D"><span style="width: 9px; height: 9px; border-radius: 999px; background: #79ADE4; flex: none"></span>Pickrr</div>
+          <div style="font-family: 'EB Garamond', serif; font-size: clamp(14px, 1.5vw, 25px); color: #55524A; white-space: nowrap">2022 - 2023</div>
+          <div style="display: flex; align-items: center; gap: 14px; color: #33322D"><span style="width: 9px; height: 9px; border-radius: 999px; background: #79ADE4; flex: none"></span>University of Delhi</div>
+          <div style="font-family: 'EB Garamond', serif; font-size: clamp(14px, 1.5vw, 25px); color: #55524A; white-space: nowrap">2017 - 2020</div>
+        </div>
+        <div style="position: relative; margin: 6.5% 0 0 36%; width: 64%; border-radius: 10px; background: #F4F2EC; box-shadow: 0 14px 26px -6px rgba(120,104,72,0.28), 0 3px 6px rgba(120,104,72,0.12); overflow: hidden">
+          <div style="display: flex; gap: 7px; padding: 11px 13px; background: #EAE7DF">
+            <span style="width: 9px; height: 9px; border-radius: 999px; background: #E4685B"></span>
+            <span style="width: 9px; height: 9px; border-radius: 999px; background: #E7B84F"></span>
+            <span style="width: 9px; height: 9px; border-radius: 999px; background: #6FBF6A"></span>
+          </div>
+          <div style="padding: 4% 5.5% 5%">
+            <div style="font-size: clamp(12px, 1.05vw, 17px); font-weight: 700; color: #22211D">Today</div>
+            <p style="margin: 9px 0 0; font-size: clamp(11px, 1.05vw, 17px); line-height: 1.6; color: #4A4740; text-wrap: pretty">[Add a short note — something you noticed this week that changed how you think about the work.]</p>
+          </div>
+        </div>
+        <div style="position: absolute; left: 4%; bottom: 4%; width: 38%; padding: 12px 14px; border-radius: 18px; background: rgba(255,255,255,0.88); box-shadow: 0 10px 28px rgba(30,26,20,0.16); transform: rotate(-1deg)">
+          <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px">
+            <span style="width: 20px; height: 20px; border-radius: 6px; background: linear-gradient(180deg, #6FE07A, #23BE3F); flex: none"></span>
+            <span style="font-size: clamp(9px, 0.8vw, 13px); font-weight: 600; letter-spacing: 0.06em; color: #8A8172">MESSAGES</span>
+            <span style="margin-left: auto; font-size: clamp(9px, 0.8vw, 13px); color: #A79E8C">now</span>
+          </div>
+          <div style="font-size: clamp(11px, 1.05vw, 17px); font-weight: 700; color: #22211D">Deeksha Gahlot</div>
+          <div style="margin-top: 4px; font-size: clamp(11px, 1vw, 16px); line-height: 1.65; color: #4A4740">gahlot.deeksha345@gmail.com<br />+91 7678344852<br />Gurugram | India</div>
+        </div>
+      </div>
+      <div data-page="right" style="flex: 1; padding: 4% 4.5%; overflow: hidden; opacity: 0; transition: opacity .5s ease .38s">
+        <div style="position: relative; width: 100%; height: 100%">
+          <div style="position: absolute; left: 0; top: 0; width: 21%; text-align: center; transform: rotate(-5deg)">
+            <img src="/uploads/pasted-1788545682454-0.webp" alt="Jar of brushes" style="display: block; width: 100%; height: auto; filter: drop-shadow(0 8px 16px rgba(120,104,72,0.14))" />
+            <div style="margin-top: 6px; font-size: clamp(11px, 1vw, 17px); font-weight: 600; color: #22211D">sketching.png</div>
+          </div>
+          <div style="position: absolute; left: 26%; top: -1%; width: 21%; text-align: center; transform: rotate(3deg)">
+            <img src="/uploads/pasted-1788545421757-0.webp" alt="Figma tools" style="display: block; width: 100%; height: auto; filter: drop-shadow(0 8px 16px rgba(120,104,72,0.14))" />
+            <div style="margin-top: 4px; font-size: clamp(11px, 1vw, 17px); font-weight: 600; color: #22211D">Figma</div>
+          </div>
+          <div style="position: absolute; right: 0; top: 8%; width: 22%; text-align: center; transform: rotate(6deg)">
+            <img src="/uploads/pasted-1788545688187-0.webp" alt="Potted plant" style="display: block; width: 100%; height: auto; filter: drop-shadow(0 8px 16px rgba(120,104,72,0.14))" />
+            <div style="margin-top: 6px; font-size: clamp(11px, 1vw, 17px); font-weight: 600; color: #22211D">plant.png</div>
+          </div>
+          <div style="position: absolute; left: 44%; top: 30%; transform: translateX(-50%); z-index: 3">
+            <div style="position: relative; padding: 9px 16px; border-radius: 12px; background: #3A3733; color: #F7F4EC; font-size: clamp(11px, 1.05vw, 18px); font-weight: 500; box-shadow: 0 8px 20px rgba(30,26,20,0.22); white-space: nowrap">@deekshagahlot
+              <span style="position: absolute; left: 50%; bottom: -7px; width: 14px; height: 14px; margin-left: -7px; background: #3A3733; clip-path: polygon(0 0, 100% 0, 50% 100%)"></span>
+            </div>
+          </div>
+          <div style="position: absolute; left: 44%; top: 56%; width: 68%; transform: translate(-50%, -48%) rotate(-2.5deg)">
+            <img src="/uploads/pasted-1788553252212-0.webp" alt="Polaroid of Deeksha" style="display: block; width: 100%; height: auto; object-fit: contain; filter: drop-shadow(0 14px 30px rgba(120,104,72,0.20))" />
+          </div>
+          <div style="position: absolute; left: 2%; bottom: 2%; width: 19%; text-align: center; transform: rotate(5deg)">
+            <img src="/uploads/pasted-1788545515123-0.webp" alt="Pixel chef" style="display: block; width: 100%; height: auto; image-rendering: pixelated" />
+            <div style="margin-top: 6px; font-size: clamp(11px, 1vw, 17px); font-weight: 600; color: #22211D">cooking.md</div>
+          </div>
+          <div style="position: absolute; right: 0; bottom: 2%; width: 22%; text-align: center; transform: rotate(-6deg)">
+            <img src="/uploads/pasted-1788545661792-0.webp" alt="Iced coffee" style="display: block; width: 100%; height: auto; filter: drop-shadow(0 8px 16px rgba(120,104,72,0.14))" />
+            <div style="margin-top: 6px; font-size: clamp(11px, 1vw, 17px); font-weight: 600; color: #22211D">CoffeeLover.png</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="position: relative; height: 7vw; overflow: hidden">
+    <div data-tape="1" style="position: absolute; left: -8%; top: 2vw; width: 116%; transform: rotate(-4deg); background: #EBDFC4; border-top: 1px solid #DFCFAB; border-bottom: 1px solid #DFCFAB; padding: 0.7vw 0; overflow: hidden">
+      <div style="display: flex; width: max-content; animation: tape 26s linear infinite; font-family: 'EB Garamond', serif; font-size: 1.15vw; letter-spacing: 0.06em; color: #6E5B3A; white-space: nowrap">
+        <span style="padding-right: 2vw">Design systems • Claude code • Interaction design • Rapid prototyping • User research • Design systems • Claude code • Interaction design • Rapid prototyping • User research •&nbsp;</span>
+        <span style="padding-right: 2vw">Design systems • Claude code • Interaction design • Rapid prototyping • User research • Design systems • Claude code • Interaction design • Rapid prototyping • User research •&nbsp;</span>
+      </div>
+    </div>
+  </div>
+
+  <section id="resume" data-screen-label="Contact" style="position: relative; padding: 4vw 8vw 3.5vw; background: #F4F0E6; text-align: center; overflow: hidden">
+    <div data-reveal="1" style="display: flex; margin: 0 auto; align-items: center; justify-content: center; width: 5vw; height: 5vw; min-width: 62px; min-height: 62px; border-radius: 999px; background: #FBF8F0; border: 1px solid #E7DFCB; box-shadow: 0 8px 20px rgba(120,104,72,0.10); font-family: 'EB Garamond', serif; font-size: clamp(22px, 2.1vw, 38px); line-height: 1; color: #9D7A54">DG</div>
+    <div data-reveal="1" style="position: relative; display: inline-block; margin-top: 1.6vw">
+      <h2 style="margin: 0; font-size: clamp(28px, 3vw, 56px); font-weight: 800; letter-spacing: -0.015em; color: #22211D">come say hi!</h2>
+    </div>
+    <p data-reveal="1" style="margin: 1vw auto 0; max-width: 46ch; font-size: clamp(14px, 1.25vw, 22px); line-height: 1.6; color: #4A4740">let's talk design, internet culture, or your latest playlist.</p>
+    <div data-reveal="1" style="display: flex; flex-wrap: wrap; gap: 1.2vw; justify-content: center; margin-top: 2vw">
+      <a href="mailto:gahlot.deeksha345@gmail.com" style="display: flex; align-items: center; gap: 0.6vw; padding: 0.9vw 1.6vw; border-radius: 999px; border: 1px solid #E7DFCB; background: #FBF8F0; font-size: clamp(13px, 1.1vw, 19px); font-weight: 500; color: #33322D; box-shadow: 0 6px 16px rgba(120,104,72,0.10)" style-hover="transform: translateY(-2px)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" style="width: 1.2vw; min-width: 16px; height: auto"><rect x="3" y="5.5" width="18" height="13" rx="2"></rect><path d="M3.5 7l8.5 6 8.5-6"></path></svg>
+        Shoot an email
+      </a>
+      <a href="https://www.linkedin.com/in/deeksha-gahlot/" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 0.6vw; padding: 0.9vw 1.6vw; border-radius: 999px; border: 1px solid #E7DFCB; background: #FBF8F0; font-size: clamp(13px, 1.1vw, 19px); font-weight: 500; color: #33322D; box-shadow: 0 6px 16px rgba(120,104,72,0.10); cursor: pointer" style-hover="transform: translateY(-2px)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" style="width: 1.2vw; min-width: 16px; height: auto"><rect x="3.5" y="3.5" width="17" height="17" rx="3"></rect><path d="M8 10.5v6M8 7.6v.1M12 16.5v-3.4a2 2 0 0 1 4 0v3.4"></path></svg>
+        Connect with me
+      </a>
+      <a href="/uploads/Deeksha_Gahlot_Resume.pdf" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 0.6vw; padding: 0.9vw 1.6vw; border-radius: 999px; border: 1px solid #E7DFCB; background: #FBF8F0; font-size: clamp(13px, 1.1vw, 19px); font-weight: 500; color: #33322D; box-shadow: 0 6px 16px rgba(120,104,72,0.10); cursor: pointer" style-hover="transform: translateY(-2px)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" style="width: 1.2vw; min-width: 16px; height: auto"><path d="M12 4v10M8 11l4 4 4-4M5 19h14"></path></svg>
+        Resume
+      </a>
+    </div>
+  </section>
+
+</div>
+</body>
+</html>
